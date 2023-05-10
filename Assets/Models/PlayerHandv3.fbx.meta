@@ -1,0 +1,1254 @@
+fileFormatVersion: 2
+guid: 0a35f3d96e6991546a0fc2cd7bd6e51f
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 1115540767941509640
+    second: AniPlayer-T-Pose
+  - first:
+      74: -1733683949949928385
+    second: AniPlayer-CPR_Start
+  - first:
+      74: 105068013270848381
+    second: AniPlayer-CPR_PositionIdle
+  - first:
+      74: 1695621866412857916
+    second: AniPlayer-Positioning
+  - first:
+      74: -9107592365055637116
+    second: AniPlayer-CPR_Pose
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: f0ea49f560a839a43812c41547bec1ed, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: AniPlayer-T-Pose
+      takeName: AniPlayer-T-Pose
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Humanoid Hands_deform
+        weight: 0
+      - path: Humanoid Hands_deform/DEF-spine
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-shin.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-thigh.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-shin.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-thigh.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-forearm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L/DEF-f_index.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L/DEF-f_middle.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L/DEF-f_pinky.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L/DEF-f_ring.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L/DEF-thumb.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-upper_arm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-forearm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R/DEF-f_index.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R/DEF-f_middle.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R/DEF-f_pinky.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R/DEF-f_ring.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R/DEF-thumb.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-upper_arm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-spine.005
+        weight: 1
+      - path: PlayerHands
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AniPlayer-CPR_Start
+      takeName: AniPlayer-CPR_Start
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Humanoid Hands_deform
+        weight: 0
+      - path: Humanoid Hands_deform/DEF-spine
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-shin.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-thigh.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-shin.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-thigh.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-forearm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L/DEF-f_index.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L/DEF-f_middle.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L/DEF-f_pinky.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L/DEF-f_ring.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L/DEF-thumb.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-upper_arm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-forearm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R/DEF-f_index.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R/DEF-f_middle.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R/DEF-f_pinky.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R/DEF-f_ring.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R/DEF-thumb.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-upper_arm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-spine.005
+        weight: 1
+      - path: PlayerHands
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AniPlayer-CPR_PositionIdle
+      takeName: AniPlayer-CPR_PositionIdle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 89
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Humanoid Hands_deform
+        weight: 0
+      - path: Humanoid Hands_deform/DEF-spine
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-shin.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-thigh.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-shin.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-thigh.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-forearm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L/DEF-f_index.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L/DEF-f_middle.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L/DEF-f_pinky.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L/DEF-f_ring.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L/DEF-thumb.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-upper_arm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-forearm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R/DEF-f_index.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R/DEF-f_middle.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R/DEF-f_pinky.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R/DEF-f_ring.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R/DEF-thumb.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-upper_arm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-spine.005
+        weight: 1
+      - path: PlayerHands
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AniPlayer-Positioning
+      takeName: AniPlayer-Positioning
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 27
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.7092631
+        functionName: BlendInIKChest
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0.2
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Humanoid Hands_deform
+        weight: 0
+      - path: Humanoid Hands_deform/DEF-spine
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-shin.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-thigh.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-shin.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-thigh.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-forearm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L/DEF-f_index.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L/DEF-f_middle.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L/DEF-f_pinky.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L/DEF-f_ring.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L/DEF-thumb.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-upper_arm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-forearm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R/DEF-f_index.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R/DEF-f_middle.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R/DEF-f_pinky.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R/DEF-f_ring.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R/DEF-thumb.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-upper_arm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-spine.005
+        weight: 1
+      - path: PlayerHands
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: AniPlayer-CPR_Pose
+      takeName: AniPlayer-CPR_Pose
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Humanoid Hands_deform
+        weight: 0
+      - path: Humanoid Hands_deform/DEF-spine
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-foot.L/DEF-toe.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-shin.L/DEF-shin.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.L/DEF-thigh.L/DEF-thigh.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-foot.R/DEF-toe.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-shin.R/DEF-shin.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-pelvis.R/DEF-thigh.R/DEF-thigh.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-forearm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_index.01.L/DEF-f_index.02.L/DEF-f_index.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_middle.01.L/DEF-f_middle.02.L/DEF-f_middle.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_pinky.01.L/DEF-f_pinky.02.L/DEF-f_pinky.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-f_ring.01.L/DEF-f_ring.02.L/DEF-f_ring.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-forearm.L/DEF-hand.L/DEF-thumb.01.L/DEF-thumb.02.L/DEF-thumb.03.L
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.L/DEF-upper_arm.L/DEF-upper_arm.L.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-forearm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_index.01.R/DEF-f_index.02.R/DEF-f_index.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_middle.01.R/DEF-f_middle.02.R/DEF-f_middle.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_pinky.01.R/DEF-f_pinky.02.R/DEF-f_pinky.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-f_ring.01.R/DEF-f_ring.02.R/DEF-f_ring.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-forearm.R/DEF-hand.R/DEF-thumb.01.R/DEF-thumb.02.R/DEF-thumb.03.R
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-shoulder.R/DEF-upper_arm.R/DEF-upper_arm.R.001
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004
+        weight: 1
+      - path: Humanoid Hands_deform/DEF-spine/DEF-spine.001/DEF-spine.002/DEF-spine.003/DEF-spine.004/DEF-spine.005
+        weight: 1
+      - path: PlayerHands
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: PlayerHandv3(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlayerHands
+      parentName: PlayerHandv3(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Humanoid Hands_deform
+      parentName: PlayerHandv3(Clone)
+      position: {x: 0, y: -1.5759783, z: 0.026700139}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DEF-spine
+      parentName: Humanoid Hands_deform
+      position: {x: -0, y: 0.05519997, z: 1.0099}
+      rotation: {x: 0.7904554, y: 0, z: 0, w: 0.6125196}
+      scale: {x: 1, y: 0.9999997, z: 0.9999997}
+    - name: DEF-spine.001
+      parentName: DEF-spine
+      position: {x: -0, y: 0.15221953, z: 0.0000000018626451}
+      rotation: {x: -0.06447634, y: 0, z: -0, w: 0.99791926}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: DEF-spine.002
+      parentName: DEF-spine.001
+      position: {x: -0, y: 0.13663667, z: -0.000000016385457}
+      rotation: {x: -0.077464156, y: 0, z: -0, w: 0.99699515}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: DEF-spine.003
+      parentName: DEF-spine.002
+      position: {x: -0, y: 0.1728875, z: 0.0000000023283064}
+      rotation: {x: 0.0016272651, y: -0, z: -0, w: 0.9999987}
+      scale: {x: 1, y: 0.9999998, z: 0.9999999}
+    - name: DEF-spine.004
+      parentName: DEF-spine.003
+      position: {x: -0, y: 0.19257881, z: -0.000000006519258}
+      rotation: {x: 0.20173775, y: -0, z: -0, w: 0.9794396}
+      scale: {x: 1, y: 1.0000004, z: 1.0000005}
+    - name: DEF-spine.005
+      parentName: DEF-spine.004
+      position: {x: -0, y: 0.066163406, z: -0.000000027008355}
+      rotation: {x: -0.18772946, y: 0, z: -0, w: 0.98222077}
+      scale: {x: 1, y: 0.99999976, z: 0.99999976}
+    - name: DEF-shoulder.L
+      parentName: DEF-spine.003
+      position: {x: -0.0183, y: 0.13912745, z: 0.011532755}
+      rotation: {x: -0.52756095, y: 0.4555536, z: 0.46897283, w: 0.54241574}
+      scale: {x: 0.9999998, y: 1.0000006, z: 1.0000001}
+    - name: DEF-upper_arm.L
+      parentName: DEF-shoulder.L
+      position: {x: 0.002380449, y: 0.1792544, z: -0.020382384}
+      rotation: {x: 0.05084788, y: -0.78342307, z: 0.05271285, w: 0.61715823}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.99999976}
+    - name: DEF-upper_arm.L.001
+      parentName: DEF-upper_arm.L
+      position: {x: -0.000000046100467, y: 0.14737281, z: 0.000000059604645}
+      rotation: {x: -0.000000008207883, y: 0.012172375, z: 0.0000000016299357, w: 0.9999259}
+      scale: {x: 0.99999946, y: 1.0000005, z: 1.0000008}
+    - name: DEF-forearm.L
+      parentName: DEF-upper_arm.L
+      position: {x: 0.00000014621764, y: 0.29474556, z: 0.000000037252903}
+      rotation: {x: 0.015600987, y: 0.024335962, z: -0.00037972306, w: 0.99958205}
+      scale: {x: 1.0000005, y: 1.0000008, z: 0.99999994}
+    - name: DEF-forearm.L.001
+      parentName: DEF-forearm.L
+      position: {x: -0.00000012805685, y: 0.13454324, z: 0.000000007450581}
+      rotation: {x: -0.00000013782251, y: 0.015172019, z: -0.0000004365494, w: 0.9998849}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.99999976}
+    - name: DEF-hand.L
+      parentName: DEF-forearm.L
+      position: {x: -0.00020556618, y: 0.2690689, z: -0.00011364743}
+      rotation: {x: 0.42556003, y: 0.027735189, z: 0.022829229, w: 0.904217}
+      scale: {x: 1.0000004, y: 1, z: 1.0000005}
+    - name: DEF-f_index.01.L
+      parentName: DEF-hand.L
+      position: {x: 0.028347524, y: 0.12323379, z: 0.045931958}
+      rotation: {x: 0.009908315, y: -0.8235541, z: -0.063700594, w: 0.56356263}
+      scale: {x: 1.0000001, y: 1.0000005, z: 0.99999976}
+    - name: DEF-f_index.02.L
+      parentName: DEF-f_index.01.L
+      position: {x: -0.00000006053597, y: 0.03725068, z: 0.000000040978193}
+      rotation: {x: -0.039105814, y: 0.10595084, z: 0.013391857, w: 0.9935119}
+      scale: {x: 0.9999994, y: 0.9999995, z: 0.99999994}
+    - name: DEF-f_index.03.L
+      parentName: DEF-f_index.02.L
+      position: {x: 0.00000008568168, y: 0.03152926, z: 0.00000020954758}
+      rotation: {x: -0.017449956, y: 0.0024386342, z: -0.02441194, w: 0.9995467}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: DEF-f_middle.01.L
+      parentName: DEF-hand.L
+      position: {x: 0.02798839, y: 0.12737402, z: 0.01870804}
+      rotation: {x: 0.010029074, y: -0.7000129, z: -0.05494831, w: 0.71194255}
+      scale: {x: 0.99999934, y: 0.9999996, z: 0.9999997}
+    - name: DEF-f_middle.02.L
+      parentName: DEF-f_middle.01.L
+      position: {x: -0.000000022351742, y: 0.040439885, z: -0.00000018533319}
+      rotation: {x: -0.04024449, y: -0.019348076, z: -0.0066033984, w: 0.99898076}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.9999999}
+    - name: DEF-f_middle.03.L
+      parentName: DEF-f_middle.02.L
+      position: {x: 0.00000008940697, y: 0.030930378, z: -0.00000003632158}
+      rotation: {x: -0.019845294, y: -0.0017871459, z: 0.018496308, w: 0.9996304}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1.0000001}
+    - name: DEF-f_pinky.01.L
+      parentName: DEF-hand.L
+      position: {x: -0.0006977394, y: 0.114024855, z: -0.030881114}
+      rotation: {x: 0.0043123337, y: -0.56758153, z: -0.04738401, w: 0.8219412}
+      scale: {x: 0.99999994, y: 0.99999976, z: 1}
+    - name: DEF-f_pinky.02.L
+      parentName: DEF-f_pinky.01.L
+      position: {x: -0.000000074505806, y: 0.03311128, z: -0.0000000055879354}
+      rotation: {x: 0.0150339855, y: -0.057910837, z: -0.004078944, w: 0.99820024}
+      scale: {x: 0.9999997, y: 0.9999997, z: 1}
+    - name: DEF-f_pinky.03.L
+      parentName: DEF-f_pinky.02.L
+      position: {x: -0, y: 0.023999376, z: -0.00000014016405}
+      rotation: {x: -0.103710495, y: -0.0016481475, z: 0.011477308, w: 0.99454}
+      scale: {x: 0.99999976, y: 0.99999964, z: 0.9999995}
+    - name: DEF-f_ring.01.L
+      parentName: DEF-hand.L
+      position: {x: 0.015813095, y: 0.12626271, z: -0.011496015}
+      rotation: {x: 0.0062843836, y: -0.6789954, z: -0.049165558, w: 0.73246735}
+      scale: {x: 0.99999994, y: 0.9999997, z: 1}
+    - name: DEF-f_ring.02.L
+      parentName: DEF-f_ring.01.L
+      position: {x: -0.000000022351742, y: 0.039407454, z: -0.00000014808029}
+      rotation: {x: -0.0030763997, y: -0.04152396, z: -0.009569102, w: 0.999087}
+      scale: {x: 0.9999998, y: 0.9999998, z: 0.99999946}
+    - name: DEF-f_ring.03.L
+      parentName: DEF-f_ring.02.L
+      position: {x: 0.000000063329935, y: 0.02633774, z: 0.000000044703484}
+      rotation: {x: 0.02306149, y: -0.0020244324, z: 0.020743024, w: 0.9995168}
+      scale: {x: 0.9999997, y: 0.99999946, z: 0.9999996}
+    - name: DEF-thumb.01.L
+      parentName: DEF-hand.L
+      position: {x: 0.0051316526, y: 0.045130223, z: 0.040244438}
+      rotation: {x: -0.096717566, y: 0.8792763, z: 0.43411955, w: -0.17046732}
+      scale: {x: 0.99999994, y: 0.99999976, z: 1.0000001}
+    - name: DEF-thumb.02.L
+      parentName: DEF-thumb.01.L
+      position: {x: 0.0000000043328328, y: 0.0437381, z: -0.00000003410969}
+      rotation: {x: 0.04099303, y: 0.00010542568, z: -0.0002168267, w: 0.9991595}
+      scale: {x: 1, y: 0.9999998, z: 0.99999934}
+    - name: DEF-thumb.03.L
+      parentName: DEF-thumb.02.L
+      position: {x: -0.000000057567377, y: 0.041129056, z: 0.00000006891787}
+      rotation: {x: -0.052605227, y: -0.000120230274, z: 0.00068532024, w: 0.99861515}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: DEF-shoulder.R
+      parentName: DEF-spine.003
+      position: {x: 0.0183, y: 0.13912745, z: 0.011532755}
+      rotation: {x: -0.52756095, y: -0.4555536, z: -0.46897283, w: 0.54241574}
+      scale: {x: 0.9999998, y: 1.0000006, z: 1.0000001}
+    - name: DEF-upper_arm.R
+      parentName: DEF-shoulder.R
+      position: {x: -0.002380449, y: 0.1792544, z: -0.020382384}
+      rotation: {x: 0.050847463, y: 0.78342307, z: -0.052712943, w: 0.6171581}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.99999976}
+    - name: DEF-upper_arm.R.001
+      parentName: DEF-upper_arm.R
+      position: {x: -0.00000007543713, y: 0.14737284, z: 0.000000035390258}
+      rotation: {x: -0.000000035451084, y: -0.012172197, z: -0.0000000228191, w: 0.9999259}
+      scale: {x: 0.99999964, y: 1.0000001, z: 1.0000006}
+    - name: DEF-forearm.R
+      parentName: DEF-upper_arm.R
+      position: {x: -0.00000028684735, y: 0.2947455, z: 0.000000044703484}
+      rotation: {x: 0.015601019, y: -0.024335938, z: 0.00037972382, w: 0.99958205}
+      scale: {x: 1.0000001, y: 1, z: 0.99999976}
+    - name: DEF-forearm.R.001
+      parentName: DEF-forearm.R
+      position: {x: -0.00000012060627, y: 0.13454336, z: -0.000000040978193}
+      rotation: {x: -0.00000006376656, y: -0.01517202, z: 0.00000043445374, w: 0.9998849}
+      scale: {x: 1.0000004, y: 0.9999999, z: 1}
+    - name: DEF-hand.R
+      parentName: DEF-forearm.R
+      position: {x: 0.00020519132, y: 0.26906902, z: -0.00011367723}
+      rotation: {x: 0.4255602, y: -0.027735397, z: -0.022829285, w: 0.9042168}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000004}
+    - name: DEF-f_index.01.R
+      parentName: DEF-hand.R
+      position: {x: -0.028347777, y: 0.1232339, z: 0.045931876}
+      rotation: {x: 0.009908837, y: 0.8235541, z: 0.06369983, w: 0.5635626}
+      scale: {x: 0.99999994, y: 0.9999995, z: 1.0000001}
+    - name: DEF-f_index.02.R
+      parentName: DEF-f_index.01.R
+      position: {x: -0.00000006798655, y: 0.037250724, z: 0.000000011175871}
+      rotation: {x: -0.03910147, y: -0.10595078, z: -0.01339008, w: 0.9935121}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.9999997}
+    - name: DEF-f_index.03.R
+      parentName: DEF-f_index.02.R
+      position: {x: 0.000000022351742, y: 0.031529374, z: -0.00000004656613}
+      rotation: {x: -0.017449956, y: -0.0024386405, z: 0.024411993, w: 0.9995467}
+      scale: {x: 0.9999998, y: 0.9999995, z: 1.0000005}
+    - name: DEF-f_middle.01.R
+      parentName: DEF-hand.R
+      position: {x: -0.027988527, y: 0.12737432, z: 0.01870805}
+      rotation: {x: 0.01002878, y: 0.7000126, z: 0.05494738, w: 0.71194285}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+    - name: DEF-f_middle.02.R
+      parentName: DEF-f_middle.01.R
+      position: {x: -0.000000014901161, y: 0.04043993, z: 0.00000003259629}
+      rotation: {x: -0.040249467, y: 0.019348204, z: 0.006603305, w: 0.9989805}
+      scale: {x: 1, y: 0.9999998, z: 0.9999999}
+    - name: DEF-f_middle.03.R
+      parentName: DEF-f_middle.02.R
+      position: {x: -0.000000014901161, y: 0.030930422, z: 0.00000022072345}
+      rotation: {x: -0.019847713, y: 0.0017871766, z: -0.018496763, w: 0.99963033}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.99999964}
+    - name: DEF-f_pinky.01.R
+      parentName: DEF-hand.R
+      position: {x: 0.00069761835, y: 0.114025034, z: -0.030881196}
+      rotation: {x: 0.004312545, y: 0.56758153, z: 0.04738322, w: 0.82194126}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1}
+    - name: DEF-f_pinky.02.R
+      parentName: DEF-f_pinky.01.R
+      position: {x: -0, y: 0.033111423, z: -0.00000006519258}
+      rotation: {x: 0.015034008, y: 0.0579107, z: 0.0040788283, w: 0.99820024}
+      scale: {x: 0.99999976, y: 0.999999, z: 1.0000001}
+    - name: DEF-f_pinky.03.R
+      parentName: DEF-f_pinky.02.R
+      position: {x: -0.000000029802322, y: 0.023999527, z: -0.000000016763806}
+      rotation: {x: -0.10371051, y: 0.0016481469, z: -0.011477312, w: 0.99454}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999994}
+    - name: DEF-f_ring.01.R
+      parentName: DEF-hand.R
+      position: {x: -0.015813226, y: 0.12626287, z: -0.011496067}
+      rotation: {x: 0.0062831035, y: 0.6789951, z: 0.049168713, w: 0.73246753}
+      scale: {x: 0.99999964, y: 0.99999976, z: 0.99999994}
+    - name: DEF-f_ring.02.R
+      parentName: DEF-f_ring.01.R
+      position: {x: -0.000000014901161, y: 0.039407764, z: 0.00000010430813}
+      rotation: {x: -0.003076388, y: 0.041523993, z: 0.0095691625, w: 0.999087}
+      scale: {x: 0.9999993, y: 1.0000001, z: 0.9999995}
+    - name: DEF-f_ring.03.R
+      parentName: DEF-f_ring.02.R
+      position: {x: -0.000000033527613, y: 0.026337866, z: 0.000000041909516}
+      rotation: {x: 0.023061484, y: 0.0020244373, z: -0.02074302, w: 0.9995168}
+      scale: {x: 1.0000002, y: 0.9999996, z: 1.0000001}
+    - name: DEF-thumb.01.R
+      parentName: DEF-hand.R
+      position: {x: -0.005131667, y: 0.045130216, z: 0.040244408}
+      rotation: {x: 0.09671568, y: 0.8792761, z: 0.4341201, w: 0.17046809}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: DEF-thumb.02.R
+      parentName: DEF-thumb.01.R
+      position: {x: -0.00000018828723, y: 0.043738164, z: 0.00000012619421}
+      rotation: {x: 0.040996704, y: -0.00010533631, z: 0.00021778044, w: 0.99915934}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: DEF-thumb.03.R
+      parentName: DEF-thumb.02.R
+      position: {x: 0.0000002036686, y: 0.041129068, z: -0.00000004656613}
+      rotation: {x: -0.052605193, y: 0.000120207405, z: -0.0006853147, w: 0.99861515}
+      scale: {x: 1.0000002, y: 0.99999976, z: 1}
+    - name: DEF-pelvis.L
+      parentName: DEF-spine
+      position: {x: 0.000000025139576, y: -0.000000015832484, z: 0.000000037252903}
+      rotation: {x: -0.15245503, y: 0.7933307, z: 0.28550383, w: 0.51562715}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+    - name: DEF-thigh.L
+      parentName: DEF-pelvis.L
+      position: {x: 0.021571537, y: 0.11621396, z: -0.036348797}
+      rotation: {x: 0.53362644, y: -0.4114995, z: 0.7359037, w: -0.06600595}
+      scale: {x: 0.9999996, y: 0.99999994, z: 1.0000001}
+    - name: DEF-thigh.L.001
+      parentName: DEF-thigh.L
+      position: {x: 0.000000009316376, y: 0.26818463, z: -0.000000010638898}
+      rotation: {x: -1.7347214e-16, y: 6.091801e-10, z: -0.000000006945385, w: 1}
+      scale: {x: 0.9999997, y: 0.99999994, z: 0.99999964}
+    - name: DEF-shin.L
+      parentName: DEF-thigh.L
+      position: {x: -0.000000024278968, y: 0.5363693, z: -0.000000024608736}
+      rotation: {x: 0.08754079, y: 0.0000000031905782, z: 0.0000000398037, w: 0.996161}
+      scale: {x: 0.99999964, y: 0.99999946, z: 0.99999976}
+    - name: DEF-shin.L.001
+      parentName: DEF-shin.L
+      position: {x: -7.556371e-10, y: 0.22710747, z: -2.3478108e-10}
+      rotation: {x: 0.0000000130385125, y: 1.7164378e-10, z: 0.0000000037622794, w: 1}
+      scale: {x: 0.9999996, y: 1.0000008, z: 1.0000002}
+    - name: DEF-foot.L
+      parentName: DEF-shin.L
+      position: {x: 0.000000005806564, y: 0.45421466, z: 0.00000001792601}
+      rotation: {x: -0.5273626, y: 0.0004974345, z: -0.0003086844, w: 0.84964013}
+      scale: {x: 0.99999976, y: 1, z: 1}
+    - name: DEF-toe.L
+      parentName: DEF-foot.L
+      position: {x: -0.0000000010495569, y: 0.1292457, z: -0.000000045263732}
+      rotation: {x: 0.00016146553, y: 0.9612484, z: -0.27568337, w: 0.0005626531}
+      scale: {x: 0.9999999, y: 1.0000001, z: 1}
+    - name: DEF-pelvis.R
+      parentName: DEF-spine
+      position: {x: -0.000000025139576, y: -0.000000015832484, z: 0.000000037252903}
+      rotation: {x: -0.15245503, y: -0.7933307, z: -0.28550383, w: 0.51562715}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.9999999}
+    - name: DEF-thigh.R
+      parentName: DEF-pelvis.R
+      position: {x: -0.021571537, y: 0.11621396, z: -0.036348797}
+      rotation: {x: -0.53362644, y: -0.4114995, z: 0.7359037, w: 0.06600595}
+      scale: {x: 0.9999996, y: 0.99999994, z: 1.0000001}
+    - name: DEF-thigh.R.001
+      parentName: DEF-thigh.R
+      position: {x: -0.000000009316376, y: 0.26818463, z: -0.000000010638898}
+      rotation: {x: -1.7347214e-16, y: -6.091801e-10, z: 0.000000006945385, w: 1}
+      scale: {x: 0.9999997, y: 0.99999994, z: 0.99999964}
+    - name: DEF-shin.R
+      parentName: DEF-thigh.R
+      position: {x: 0.000000024278968, y: 0.5363693, z: -0.000000024608736}
+      rotation: {x: 0.08754079, y: -0.0000000031905782, z: -0.0000000398037, w: 0.996161}
+      scale: {x: 0.99999964, y: 0.99999946, z: 0.99999976}
+    - name: DEF-shin.R.001
+      parentName: DEF-shin.R
+      position: {x: 7.556371e-10, y: 0.22710747, z: -2.3478108e-10}
+      rotation: {x: 0.0000000130385125, y: -5.441025e-10, z: -0.0000000037539105,
+        w: 1}
+      scale: {x: 0.9999996, y: 1.0000008, z: 1.0000002}
+    - name: DEF-foot.R
+      parentName: DEF-shin.R
+      position: {x: -0.000000005806564, y: 0.45421466, z: 0.00000001792601}
+      rotation: {x: -0.5273626, y: 0.0004973738, z: -0.0003087823, w: 0.84964013}
+      scale: {x: 0.99999964, y: 1.0000004, z: 1.0000002}
+    - name: DEF-toe.R
+      parentName: DEF-foot.R
+      position: {x: -0.000000009742507, y: 0.12924567, z: -0.000000056272256}
+      rotation: {x: 0.00016135482, y: 0.9612484, z: -0.27568337, w: 0.0005626849}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
