@@ -77,6 +77,7 @@ namespace UserInterface
         {
             _breathButton.enabled = activate;
             enabled = activate;
+            _count = false;
         }
         public void SetPatient(Patient patient)
         {

@@ -10,7 +10,7 @@ namespace PlayerControl
     {
         [SerializeField] private TMP_InputField _phoneInputField;
         [SerializeField] private Animator _phoneAnimator;
-        [SerializeField] private UnityEvent _eventFinishTask = new();
+        [SerializeField] private UnityEvent _enterCallEvent = new();
         private string _numberField = "";
         private bool _phoneActive = false;
         void Awake()
@@ -64,7 +64,7 @@ namespace PlayerControl
             if (_phoneInputField.text == "112")
             {
                 _phoneAnimator.Play("Calling");
-                _eventFinishTask.Invoke();
+                _enterCallEvent.Invoke();
                 StartCoroutine(nameof(ICallSequence));
             }
             else

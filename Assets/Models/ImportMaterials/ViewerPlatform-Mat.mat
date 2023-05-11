@@ -8,17 +8,16 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ViewerPlatform-Mat
-  m_Shader: {fileID: -6465566751694194690, guid: 2c3c6a46626419c4f8bbdeab2ec2afbd,
-    type: 3}
+  m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
   m_ValidKeywords:
-  - _HAFTONESHAPES_DOT
-  m_InvalidKeywords:
   - _NORMALMAP
+  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -232,6 +231,7 @@ Material:
     - _RimLightSmootness: 0
     - _RimPower: 0
     - _SPECULARHIGHTLIGHTS: 0
+    - _SampleGI: 0
     - _ShadowPatternSize: 0.3
     - _Shininess: 0
     - _SizeFalloff: 0
@@ -284,8 +284,8 @@ Material:
     - _OutlineDistancFade: {r: -25, g: 50, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
-    - _ShadowMapColor: {r: 0.9843137, g: 0.7058824, b: 0.5882353, a: 1}
-    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _ShadowMapColor: {r: 0.6037736, g: 0.40007174, b: 0.31555712, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 0.5}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6937021217663704642

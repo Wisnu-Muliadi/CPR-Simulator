@@ -21,15 +21,15 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: B-Wall-Mat
-  m_Shader: {fileID: 4800000, guid: e88aeddd2ef1f934d805981244872e27, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8d2bb70cbf9db8d4da26e15b26e74248, type: 3}
   m_ValidKeywords:
-  - _HALFTONESHAPE_DOT
   - _NORMALMAP
+  - _SPECULAR_COLOR
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2050
+  m_CustomRenderQueue: -1
   stringTagMap:
     RenderType: Opaque
   disabledShaderPasses: []
@@ -167,7 +167,7 @@ Material:
     - _DstBlend: 0
     - _EmissionMulByBaseColor: 0
     - _EnabledHairSpec: 0
-    - _EnvironmentReflections: 1
+    - _EnvironmentReflections: 0
     - _FaceShadowMapEnabled: 0
     - _FaceShadowMapPow: 0.2
     - _FaceShadowSmoothness: 0
@@ -235,7 +235,7 @@ Material:
     - _ShadowPatternSize: 0.3
     - _Shininess: 0
     - _SizeFalloff: 0
-    - _Smoothness: 0.19999999
+    - _Smoothness: 0
     - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpecClipMaskScale: 1
@@ -246,7 +246,7 @@ Material:
     - _SpecSource: 0
     - _SpecularClipStrength: 0
     - _SpecularFalloff: 0.5
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SpecularSize: 0.25
     - _SpherizeNormalEnabled: 0
     - _SrcBlend: 1
@@ -265,8 +265,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.64599997, g: 0.6156, b: 0.51426667, a: 1}
-    - _Color: {r: 0.97088945, g: 1, b: 0.7962264, a: 1}
+    - _BaseColor: {r: 0.90101373, g: 1, b: 0.51320755, a: 1}
+    - _Color: {r: 0.90101373, g: 1, b: 0.51320755, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionMapChannelMask: {r: 1, g: 1, b: 1, a: 0}
     - _FaceFrontDirection: {r: 0, g: 0, b: 1, a: 0}
@@ -283,6 +283,6 @@ Material:
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShadowMapColor: {r: 0.69803923, g: 0.3882353, b: 0.25882354, a: 1}
-    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 0}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

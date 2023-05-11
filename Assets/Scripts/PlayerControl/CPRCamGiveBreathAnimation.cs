@@ -19,7 +19,6 @@ namespace PlayerControl
         }
         void OnEnable()
         {
-            Debug.Log("Timer Reset");
             _timer = _delayForEachGive;
         }
         void Update()
