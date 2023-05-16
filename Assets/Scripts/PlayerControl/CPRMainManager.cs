@@ -111,7 +111,7 @@ namespace PlayerControl
                 {
                     eventUI_Enable.Invoke(true);
                     eventUI_Update.Invoke(selectable.GetDescription());
-                    if (Input.GetButtonDown("Interact"))
+                    if (Input.GetButtonDown("Interact") || Input.GetMouseButtonDown(0))
                     {
                         selectable.Interact(this);
                         eventUI_Enable.Invoke(false);

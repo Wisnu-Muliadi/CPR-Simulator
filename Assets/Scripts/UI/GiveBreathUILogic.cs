@@ -8,7 +8,7 @@ using CardiacPatient;
 
 namespace UserInterface
 {
-    public class GiveBreathUILogic : MonoBehaviour, IPointerDownHandler
+    public class GiveBreathUILogic : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
     {
         private Button _breathButton;
         [HideInInspector]
@@ -25,6 +25,7 @@ namespace UserInterface
         private readonly float _breathSpeed = 1;
         private bool _count, _nice;
         [SerializeField] private UnityEvent _gaveBreath;
+        public UnityEvent<bool> PointerEnterEvent = new();
 
         void Awake()
         {
@@ -42,11 +43,20 @@ namespace UserInterface
                 _fillArea.color = Color.Lerp(_low, _high, _breathBar.value);
             }
         }
+        
         public void OnPointerDown(PointerEventData eventData)
         {
             _popUpAnimator.Play("Hide");
             _timer = 0;
             _count = true;
+        }
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            PointerEnterEvent.Invoke(true);
+        }
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            PointerEnterEvent.Invoke(false);
         }
         public void Evaluate()
         {
@@ -84,5 +94,6 @@ namespace UserInterface
             this.patient = patient; // unused. just in case needed
             _logic = patient.cardiacPatientLogic;
         }
+
     }
 }

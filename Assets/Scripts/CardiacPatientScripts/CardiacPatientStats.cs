@@ -18,6 +18,7 @@ namespace CardiacPatient
 
         [Header("Parameters")]
         public float maxSuffocationSpeed = .75f;
+        public float healthDecreaseMultiplier = .05f;
         const float _maxBloodOxygenLevel = 2;
         const float _suffocationSpeedIncrement = 0.2f;
         const float _bloodOxygenReductionIncrement = 0.08f;
@@ -37,7 +38,8 @@ namespace CardiacPatient
 
             if(patientBrainOxygenLevel < LowBrainOxygenThreshold && patientHealth > 0)
             {
-                PatientHealthDecreasing();
+                if(SuffocationSpeed > 0)
+                    PatientHealthDecreasing();
                 if (patientHealth < 0) onZeroHealth?.Invoke();
             }
         }
@@ -57,7 +59,7 @@ namespace CardiacPatient
                 }
             }
         }
-        private void PatientHealthDecreasing() => patientHealth -= (_healthStart - patientBrainOxygenLevel) / 50 * Time.deltaTime;
+        private void PatientHealthDecreasing() => patientHealth -= healthDecreaseMultiplier * (_healthStart - patientBrainOxygenLevel) * Time.deltaTime;
         public float PatientHealthPercentage() => patientHealth / _healthStart;
         public float PatientOxygenPercentage() => patientBrainOxygenLevel / _oxygenStart;
 

@@ -11,6 +11,7 @@ namespace PlayerControl
         [SerializeField] private TMP_InputField _phoneInputField;
         [SerializeField] private Animator _phoneAnimator;
         [SerializeField] private UnityEvent _enterCallEvent = new();
+        [SerializeField, Tooltip("false when Using Phone")] private UnityEvent<bool> _notUsingPhone = new();
         private string _numberField = "";
         private bool _phoneActive = false;
         void Awake()
@@ -28,6 +29,7 @@ namespace PlayerControl
         {
             if (!_phoneActive)
             {
+                _notUsingPhone.Invoke(false);
                 _numberField = "";
                 _phoneInputField.text = "";
                 _phoneActive = true;
@@ -40,6 +42,7 @@ namespace PlayerControl
             }
             else
             {
+                _notUsingPhone.Invoke(true);
                 _phoneActive = false;
                 _phoneAnimator.Play("PhoneSlideIn", 1, 1);
                 _phoneAnimator.SetFloat("Speed", -1);
@@ -73,6 +76,7 @@ namespace PlayerControl
         private IEnumerator ICallSequence()
         {
             enabled = false;
+            _notUsingPhone.Invoke(true);
             yield return new WaitForSecondsRealtime(1.6f);
             _phoneAnimator.Play("PhoneSlideDown", 1, .5f);
             _enterCallEvent.Invoke();

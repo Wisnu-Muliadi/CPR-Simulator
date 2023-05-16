@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
+using TMPro;
+using UserInterface;
 
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI interactionText;
     public GameObject interactionUI;
     public GameObject[] helpUI;
+    public GiveBreathUILogic giveBreathUI;
 
     // for Mouse 
     private readonly List<bool> _showingMouse = new();
+    void Start()
+    {
+        if (_showingMouse.Count != 0)
+        {
+            _showingMouse.RemoveAt(_showingMouse.Count - 1);
+        }
+        MouseDisplayUpdate();
+    }
 
     public void MouseDisplayAdd(bool add)
     {

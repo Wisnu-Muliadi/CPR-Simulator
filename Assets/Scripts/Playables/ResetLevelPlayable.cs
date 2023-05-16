@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine.SceneManagement;
-using UnityEngine.Playables;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // A behaviour that is attached to a playable
 public class ResetLevelPlayable : MonoBehaviour

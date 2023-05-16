@@ -7,6 +7,10 @@ namespace PlayerControl
     public class CPRableArm : MonoBehaviour, ICPRable
     {
         private Rigidbody _rb;
+        
+        private bool _shake;
+        private float _timer = 0;
+        private float _force = 0;
         public void Interact(CPRMainManager playerCam)
         {
             _rb = GetComponent<Rigidbody>();
@@ -19,14 +23,22 @@ namespace PlayerControl
         {
             return "Guncang";
         }
-
+        void FixedUpdate()
+        {
+            if (_shake)
+            {
+                _rb.AddRelativeForce(6f * Mathf.Sin(_force * 360f * 4f) * Vector3.right, ForceMode.Impulse);
+            }
+        }
         private IEnumerator IShakingPatient(float duration)
         {
-            for (float timer = 0 ; timer < duration ; timer += Time.deltaTime)
+            _shake = true;
+            for (_timer = 0 ; _timer < duration ; _timer += Time.deltaTime)
             {
-                _rb.AddRelativeForce(6f * Mathf.Sin(timer/duration * 360f * 4f) * Vector3.right, ForceMode.Impulse);
+                _force = _timer / duration;
                 yield return null;
             }
+            _shake = false;
         }
     }
 }
