@@ -16,7 +16,7 @@ namespace CardiacPatient
         // CPR Mode Instances
         [SerializeField, Tooltip("Will be Instanced on the First Object in the \"Chest Colliders\" Array")]
         private GameObject _cPRCameras;
-        public GameObject InstancedCamera;
+        [HideInInspector] public GameObject InstancedCamera;
         [SerializeField, Tooltip("Also Instanced on First Chest Colliders")]
         private GameObject _chestIKRoot;
         [SerializeField, Tooltip("Instanced on Head Collider")]
@@ -157,7 +157,7 @@ namespace CardiacPatient
         {
             foreach (GameObject col in _interactableColliders)
             {
-                col.AddComponent<ICPRInteractable>().patient = _patient;
+                col.AddComponent<CPRInteractable>().patient = _patient;
             }
             foreach (GameObject col in _chestColliders)
             {

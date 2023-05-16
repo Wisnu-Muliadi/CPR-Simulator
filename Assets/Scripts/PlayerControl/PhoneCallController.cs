@@ -64,7 +64,6 @@ namespace PlayerControl
             if (_phoneInputField.text == "112")
             {
                 _phoneAnimator.Play("Calling");
-                _enterCallEvent.Invoke();
                 StartCoroutine(nameof(ICallSequence));
             }
             else
@@ -76,6 +75,7 @@ namespace PlayerControl
             enabled = false;
             yield return new WaitForSecondsRealtime(1.6f);
             _phoneAnimator.Play("PhoneSlideDown", 1, .5f);
+            _enterCallEvent.Invoke();
             GlobalInstance.Instance.UIManager.MouseDisplayAdd(false);
         }
     }

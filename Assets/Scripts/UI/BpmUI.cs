@@ -25,12 +25,14 @@ namespace UserInterface {
         readonly Collider2D[] _colliders = new Collider2D[1];
 
         float _bpmCounter;
-        float _lastHit;
+        float _lastHitTime;
 
         const int _cprPushLimit = 30;
+        const float _delayInput = .25f;
         int _cprPushCount;
         float _pulseTimer;
         public UnityEvent hitEvent;
+        bool _missed;
 
         void Start()
         {
@@ -46,14 +48,15 @@ namespace UserInterface {
         void UpdateTimerBar()
         {
             _bpmTimer = Mathf.Repeat(_bpmTimer + Time.deltaTime, 1);
-            _lastHit += Time.deltaTime;
+            _lastHitTime += Time.deltaTime;
             _bpmHelperBar.value = _sliderTimeCurve.Evaluate(_bpmTimer);
         }
         public void CPRHit()
         {
-            if (_lastHit < .25f || _pushDepthBar.value == 0) return;
-            _bpmCounter = 1 / _lastHit * 60;
-            _lastHit = 0;
+            if (_lastHitTime < _delayInput || _pushDepthBar.value == 0) return;
+            _bpmCounter = 60 / _lastHitTime;
+            if (_lastHitTime > .65f) _missed = true;
+            _lastHitTime = 0;
 
             _cprPushCount++;
             _cprPushCounter.text = _cprPushCount.ToString();
@@ -61,7 +64,12 @@ namespace UserInterface {
             {
                 if (_bpmCol.GetContacts(_colliders) > 0)
                 {
-                    _bpmCounter = 120;
+                    if (!_missed)
+                    {
+                        _bpmCounter = 120;
+                        StartCoroutine(IPulseBPMCounter(.2f));
+                    } else
+                        _bpmUICounter.color = Color.white;
                     StartCoroutine(IPulseHitBar(.2f));
                 }
                 else _bpmUICounter.color = Color.white;
@@ -74,6 +82,7 @@ namespace UserInterface {
             }
 
             _bpmUICounter.text = _bpmCounter.ToString("0");
+            _missed = false;
         }
         public float GetBPM()
         {
@@ -83,25 +92,33 @@ namespace UserInterface {
         {
             hitEvent.Invoke();
 
-            _bpmUICounter.color = _colorOk;
             for (_pulseTimer = 0; _pulseTimer <= duration; _pulseTimer += Time.deltaTime)
             {
                 _bpmHitBar.localScale = Vector3.one + .5f * _sliderTimeCurve.Evaluate(_pulseTimer / duration) * Vector3.one;
-                _counterTransform.localScale = Vector3.one + .5f * _sliderTimeCurve.Evaluate(_pulseTimer / duration) * Vector3.one;
                 yield return null;
             }
             _bpmHitBar.localScale = Vector3.one;
+        }
+        IEnumerator IPulseBPMCounter(float duration)
+        {
+            _bpmUICounter.color = _colorOk;
+            for (_pulseTimer = 0; _pulseTimer <= duration;)
+            {
+                _counterTransform.localScale = Vector3.one + .5f * _sliderTimeCurve.Evaluate(_pulseTimer / duration) * Vector3.one;
+                yield return null;
+            }
             _counterTransform.localScale = Vector3.one;
         }
         public void ResetUI()
         {
             _bpmCounter = 0;
-            _lastHit = 0;
+            _lastHitTime = 0;
             _cprPushCount = 0;
 
             _bpmUICounter.color = Color.white;
             _bpmHitImg.color = _colorOk;
             _cprPushCounter.color = Color.white;
+            _cprPushCounter.text = "0";
         }
     }
 }

@@ -1419,6 +1419,7 @@ MonoBehaviour:
   _pushDepthBar: {fileID: 2317378598476605154}
   _bpmBar: {fileID: 2317378599402819518}
   _bpmUIScript: {fileID: 2317378598261189931}
+  _growScale: {x: 1.25, y: 1.25, z: 1.25}
 --- !u!1 &2317378599222829080
 GameObject:
   m_ObjectHideFlags: 0

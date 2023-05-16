@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 namespace UserInterface
 {
@@ -9,7 +10,8 @@ namespace UserInterface
     {
         Slider _ambulanceSlider;
         [SerializeField, Tooltip("in Seconds")] float _waitDuration = 300;
-        float _currTime = 0;
+        [SerializeField] UnityEvent _ambulanceArrived;
+        [SerializeField] float _currTime = 0;
         void Awake()
         {
             _ambulanceSlider = GetComponent<Slider>();
@@ -19,6 +21,11 @@ namespace UserInterface
         {
             _currTime = Mathf.MoveTowards(_currTime, _waitDuration, Time.deltaTime);
             _ambulanceSlider.value = _currTime;
+            if (_currTime >= 300)
+            {
+                _ambulanceArrived.Invoke();
+                enabled = false;
+            }
         }
     }
 }

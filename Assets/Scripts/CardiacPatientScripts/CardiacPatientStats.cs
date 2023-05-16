@@ -83,9 +83,12 @@ namespace CardiacPatient
             // Kali .5 supaya harus dua kali beri napas
             _bloodOxygenLevel += 0.5f * _maxBloodOxygenLevel * pointMultiplier;
             _bloodOxygenLevel = Mathf.Clamp(_bloodOxygenLevel, 0, _maxBloodOxygenLevel);
-            if (niceBonus && _bloodOxygenLevel < _maxBloodOxygenLevel)
+            if (_bloodOxygenLevel < _maxBloodOxygenLevel)
             {
-                patientBrainOxygenLevel += 2 * pointMultiplier;
+                if(niceBonus)
+                    patientBrainOxygenLevel += 2 * pointMultiplier;
+                SuffocationSpeed -= .5f * pointMultiplier;
+                SuffocationSpeed = Mathf.Clamp(SuffocationSpeed, -.05f, maxSuffocationSpeed);
             }
         }
     }

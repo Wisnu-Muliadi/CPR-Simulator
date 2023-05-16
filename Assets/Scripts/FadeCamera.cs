@@ -25,7 +25,10 @@ public class FadeCamera : MonoBehaviour
 
     public void OnGUI()
     {
-        if (_done) return;
+        if (_done)
+        {
+            enabled = false;
+        }
         if (_texture == null) _texture = new Texture2D(1, 1);
 
         fadeColor.a = _alpha;

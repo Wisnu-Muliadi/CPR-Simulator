@@ -52,7 +52,7 @@ namespace UserInterface
         {
             _nice = false;
             _count = false;
-            if (_breathBar.value > Random.Range(.95f, 1))
+            if (_breathBar.value > Random.Range(.95f, .98f))
             {
                 _popUpAnimator.Play("PopUp");
                 _breathBar.value = 1;
