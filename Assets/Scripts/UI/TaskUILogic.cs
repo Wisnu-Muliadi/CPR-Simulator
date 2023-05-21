@@ -64,6 +64,11 @@ namespace UserInterface
         {
             _tasksAnimations[index].Play("Task UI Fade");
         }
+        public void TaskPulseIn(int index)
+        {
+            _tasksAnimations[index].Play("Task UI Pulse");
+        }
+
         // presumably unused
         public bool IsInstanceActive(int index)
         {

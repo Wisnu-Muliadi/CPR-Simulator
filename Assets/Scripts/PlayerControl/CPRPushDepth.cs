@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace PlayerControl
 {
@@ -9,24 +10,38 @@ namespace PlayerControl
     {
         private Slider _slider;
         [SerializeField] GameObject[] _objectsToHide;
-        void Start()
+        [SerializeField] Image[] _images;
+        [SerializeField] TextMeshProUGUI[] _texts;
+        void Awake()
         {
             _slider = GetComponent<Slider>();
+        }
+        void OnEnable()
+        {
+            Check();
         }
         public void Check()
         {
             switch (_slider.value)
             {
                 case 0:
-                    foreach(GameObject gObject in _objectsToHide)
+                    foreach (Image img in _images)
                     {
-                        gObject.SetActive(false);
+                        img.CrossFadeAlpha(.5f, .2f, true);
+                    }
+                    foreach (TextMeshProUGUI tmpro in _texts)
+                    {
+                        tmpro.CrossFadeAlpha(.5f, .2f, true);
                     }
                     break;
                 default:
-                    foreach (GameObject gObject in _objectsToHide)
+                    foreach (Image img in _images)
                     {
-                        gObject.SetActive(true);
+                        img.CrossFadeAlpha(1f, .2f, true);
+                    }
+                    foreach (TextMeshProUGUI tmpro in _texts)
+                    {
+                        tmpro.CrossFadeAlpha(1f, .2f, true);
                     }
                     break;
             }

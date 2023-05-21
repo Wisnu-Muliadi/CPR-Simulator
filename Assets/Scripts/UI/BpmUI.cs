@@ -47,7 +47,8 @@ namespace UserInterface {
         }
         void UpdateTimerBar()
         {
-            _bpmTimer = Mathf.Repeat(_bpmTimer + Time.deltaTime, 1);
+            _bpmTimer += Time.deltaTime;
+            _bpmTimer = Mathf.Repeat(_bpmTimer, 1);
             _lastHitTime += Time.deltaTime;
             _bpmHelperBar.value = _sliderTimeCurve.Evaluate(_bpmTimer);
         }

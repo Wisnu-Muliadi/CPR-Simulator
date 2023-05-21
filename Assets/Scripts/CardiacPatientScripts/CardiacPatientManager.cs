@@ -28,7 +28,7 @@ namespace CardiacPatient
         // Patient's Parts
         [SerializeField] GameObject[] _interactableColliders, _chestColliders, _armsColliders;
         [HideInInspector] public GameObject ChestCollider;
-        [SerializeField] GameObject _headCollider;
+        public GameObject headCollider;
         [Space]
         [SerializeField] HealthUI _healthUI;
         [SerializeField] CprButtonUILogic _cprButtonUILogic;
@@ -41,7 +41,7 @@ namespace CardiacPatient
             // Positioning IK Instances
             _instancedIKRoot[0] = Instantiate(_chestIKRoot, _chestColliders[0].transform);
             _instancedIKRoot[0].transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(0, 0, 0));
-            _instancedIKRoot[1] = Instantiate(_headIKRoot, _headCollider.transform);
+            _instancedIKRoot[1] = Instantiate(_headIKRoot, headCollider.transform);
             _instancedIKRoot[1].transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(0, 0, 0));
 
             ChestCollider = _chestColliders[0];
@@ -167,7 +167,7 @@ namespace CardiacPatient
             {
                 col.AddComponent<CPRableArm>();
             }
-            _headCollider.AddComponent<CPRableHead>();
+            headCollider.AddComponent<CPRableHead>();
         }
     }
 }

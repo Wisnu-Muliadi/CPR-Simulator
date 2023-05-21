@@ -11,13 +11,18 @@ namespace UserInterface {
 
         [SerializeField] Sprite _iInteractableUI, _iCPRableUI;
         [SerializeField] List<RectTransform> _uiTargetsPool;
+        [SerializeField] SkinnedMeshRenderer _patientRenderer;
 
         [System.Serializable]
         class TargetClass
         {
             public GameObject TargetObject;
             public UITarget UITarget;
-            public void AssignUITarget() => UITarget = TargetObject.AddComponent<UITarget>();
+            public void AssignUITarget(SkinnedMeshRenderer targetRenderer)
+            {
+                UITarget = TargetObject.AddComponent<UITarget>();
+                UITarget.patientRenderer = targetRenderer;
+            }
             public bool Interactable;
             public bool CPRAble;
         }
@@ -35,7 +40,7 @@ namespace UserInterface {
         void Start()
         {
             foreach (TargetClass target in _targetObjects)
-                target.AssignUITarget();
+                target.AssignUITarget(_patientRenderer);
             SwitchToCPRSprites(false);
             DisableTargets();
         }

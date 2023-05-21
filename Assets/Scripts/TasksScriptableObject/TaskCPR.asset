@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tasks:
   - CPR sedalam <b>5cm</b> secepat <b>120 kali perdetik</b>
-  - Beri <b>Nafas Buatan</b> setelah <b>30 kompresi dada</b>.
-  - Periksa Nafas Pasien. Jika pasien belum bisa bernafas, ulangi
+  - Beri <b>2 Nafas Buatan</b> setelah <b>30 kompresi dada</b>.
+  - Jika pasien masih kesulitan bernafas, ulangi terus sampai <b>Tim Medis</b> tiba

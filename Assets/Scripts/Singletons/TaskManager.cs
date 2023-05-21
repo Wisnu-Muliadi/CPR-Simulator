@@ -8,6 +8,7 @@ public class TaskManager : MonoBehaviour
 {
     [SerializeField] private TaskUILogic _taskUI;
     [SerializeField] private List<bool> _completionBools = new();
+    List<bool> _lastBools = new();
     [SerializeField] private UnityEvent AllTasksCompleted;
 
     #region Serializable Struct
@@ -37,6 +38,7 @@ public class TaskManager : MonoBehaviour
         for (int i = 0; i < _taskUI.ListSize; i++)
         {
             _completionBools.Add(false);
+            _lastBools.Add(false);
         }
         ResetBools();
         UpdateTaskListeners();
@@ -61,7 +63,22 @@ public class TaskManager : MonoBehaviour
         }
         else
         {
-            _taskUI.TaskFade(index);
+            RefreshTaskBools();
+        }
+    }
+    // updating UI Animations
+    private void RefreshTaskBools()
+    {
+        for (int i = 0; i < _completionBools.Count; i++)
+        {
+            if (_completionBools[i] != _lastBools[i])
+            {
+                if (_completionBools[i])
+                    _taskUI.TaskFade(i);
+                else
+                    _taskUI.TaskPulseIn(i);
+                _lastBools[i] = _completionBools[i];
+            }
         }
     }
     private void AdvanceTask()
@@ -83,12 +100,14 @@ public class TaskManager : MonoBehaviour
         for (int i = 0; i < _completionBools.Count; i++)
         {
             _completionBools[i] = i >= _taskUI.tasks[_taskUI.CurrentTaskIndex].Tasks.Length;
+            _lastBools[i] = _completionBools[i];
         }
     }
     private void UpdateTaskListeners()
     {
         // No more Listeners to Deploy
         if (_finishTaskListeners.Length <= _taskUI.CurrentTaskIndex) return;
+        // Deploying listeners
         _finishTaskListeners[_taskUI.CurrentTaskIndex].NewTaskEvent.Invoke();
         foreach (MainTask.IndividualTask tasks in _finishTaskListeners[_taskUI.CurrentTaskIndex].tasks)
         {
@@ -99,7 +118,7 @@ public class TaskManager : MonoBehaviour
             }
         }
     }
-    // buggy need rework
+    // buggy needs rework
     public void UpdateTaskListeners(int index)
     {
         if (_taskUI.CurrentTaskIndex >= _finishTaskListeners.Length) return;

@@ -24,7 +24,7 @@ namespace UserInterface
         private float _timer = 0;
         private readonly float _breathSpeed = 1;
         private bool _count, _nice;
-        [SerializeField] private UnityEvent _gaveBreath;
+        [SerializeField] private UnityEvent _pointerDown, _gaveBreath;
         public UnityEvent<bool> PointerEnterEvent = new();
 
         void Awake()
@@ -46,6 +46,7 @@ namespace UserInterface
         
         public void OnPointerDown(PointerEventData eventData)
         {
+            _pointerDown.Invoke();
             _popUpAnimator.Play("Hide");
             _timer = 0;
             _count = true;

@@ -19,6 +19,12 @@ public class TargetShowUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         _textObject.SetActive(false);
         _originalScale = _rect.localScale.x;
     }
+    void OnEnable()
+    {
+        if (_textObject == null) return;
+        _textObject.SetActive(false);
+        _grow = false;
+    }
     void FixedUpdate()
     {
         switch (_grow)

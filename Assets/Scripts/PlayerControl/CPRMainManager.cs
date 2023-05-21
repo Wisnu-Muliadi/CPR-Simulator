@@ -17,9 +17,11 @@ namespace PlayerControl
         [HideInInspector] public CPR_CamController cprCamCtrl;
         [HideInInspector] public PlayerCPRTargeting cprTargeting;
 
+        [SerializeField] SkinnedMeshRenderer _playerHands;
         public UnityEvent<string> eventUI_Update;
         public UnityEvent<bool> eventUI_Enable;
-        [SerializeField] GameObject _bpmUI, _giveBreathUI; // anybetterway?
+        [SerializeField, Tooltip("CPR Push depth first in!")] List<GameObject> _bpmUI = new();
+        [SerializeField] GameObject _giveBreathUI; // anybetterway?
         public enum CamState
         {
             Overview,
@@ -43,11 +45,20 @@ namespace PlayerControl
         private RaycastHit hitInfo;
         [SerializeField] LayerMask layerMask;
 
+        void OnEnable()
+        {
+            _playerHands.enabled = true;
+        }
+        void OnDisable()
+        {
+            _playerHands.enabled = false;
+        }
         void Start()
         {
             thisCam = GetComponent<Camera>();
             _prevState = camState;
-            if (_bpmUI != null) _bpmUI.SetActive(false);
+            foreach (GameObject gObj in _bpmUI)
+                gObj.SetActive(false);
             if (_giveBreathUI != null) _giveBreathUI.SetActive(false);
         }
         void Update()
@@ -68,6 +79,7 @@ namespace PlayerControl
                     {
                         cprCamPasser.ActivateCam(1, true);
                         cprCamCtrl.StartCoroutine(nameof(cprCamCtrl.IRealignCprRoot));
+                        StartCoroutine(ICheckingHead()); //last minute addition. should do better than this
                         _camChangeState.onEnterHead.Invoke();
                     }
                     break;
@@ -75,7 +87,8 @@ namespace PlayerControl
                     if (!cprCamPasser.ActiveCam(2))
                     {
                         cprCamPasser.ActivateCam(2, true);
-                        if (_bpmUI != null) _bpmUI.SetActive(true);
+                        foreach (GameObject gObj in _bpmUI)
+                            gObj.SetActive(true);
                         cprCamCtrl.StartCoroutine(nameof(cprCamCtrl.IRealignCprRoot));
                         _camChangeState.onEnterChest.Invoke();
                     }
@@ -127,15 +140,13 @@ namespace PlayerControl
         {
             if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
             {
-                if (camState != CamState.Overview)
+                if (camState != CamState.Overview && camState != CamState.Head)
                 {
-                    camState = CamState.Overview;
-                    cprCamPasser.ActivateCam(1, false);
-                    cprCamPasser.ActivateCam(2, false);
-                    cprCamPasser.ActivateCam(3, false);
-                    if (_bpmUI != null) _bpmUI.SetActive(false);
-                    if(_giveBreathUI != null) _giveBreathUI.SetActive(false);
-                    _camChangeState.onEnterOverview.Invoke();
+                    ReturnToOverview();
+                }
+                else if (camState == CamState.Head)
+                {
+                    return;
                 }
                 else
                 {
@@ -143,6 +154,17 @@ namespace PlayerControl
                 }
                 eventUI_Enable.Invoke(false);
             }
+        }
+        private void ReturnToOverview()
+        {
+            camState = CamState.Overview;
+            cprCamPasser.ActivateCam(1, false);
+            cprCamPasser.ActivateCam(2, false);
+            cprCamPasser.ActivateCam(3, false);
+            foreach (GameObject gObj in _bpmUI)
+                gObj.SetActive(false);
+            if (_giveBreathUI != null) _giveBreathUI.SetActive(false);
+            _camChangeState.onEnterOverview.Invoke();
         }
         public void SetCPRCam(CPR_CamPasser camPasser)
         {
@@ -164,6 +186,13 @@ namespace PlayerControl
                 return true;
             }
             return false;
+        }
+        private IEnumerator ICheckingHead()
+        {
+            try { GlobalInstance.Instance.UIManager.loadingCircle.SetActive(true); }
+            catch { }
+            yield return new WaitForSecondsRealtime(4f);
+            ReturnToOverview();
         }
     }
 }

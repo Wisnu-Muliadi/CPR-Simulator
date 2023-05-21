@@ -39,6 +39,8 @@ namespace CardiacPatient
 
         [SerializeField]
         private SendEvent _stateChangeEvent;
+        [SerializeField]
+        private UnityEvent _gaspEvent;
 
         [Header("Parameters")]
         [SerializeField, Tooltip("BrainOxygenLevel when Patient Begins Gasping")]
@@ -116,6 +118,12 @@ namespace CardiacPatient
             }
         }
         public void AnimatorGasp()
+        {
+            _animatorController.SetTrigger("Gasp");
+            _gaspEvent.Invoke();
+            StartCoroutine(nameof(ResetGasp));
+        }
+        public void AnimatorGivenBreath()
         {
             _animatorController.SetTrigger("Gasp");
             StartCoroutine(nameof(ResetGasp));

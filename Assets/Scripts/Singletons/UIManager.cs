@@ -6,6 +6,8 @@ using UserInterface;
 
 public class UIManager : MonoBehaviour
 {
+    public CaptionPool captionPool;
+    public GameObject loadingCircle;
     public TextMeshProUGUI interactionText;
     public GameObject interactionUI;
     public GameObject[] helpUI;
