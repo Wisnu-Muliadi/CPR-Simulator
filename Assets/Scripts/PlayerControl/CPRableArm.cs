@@ -26,11 +26,13 @@ namespace PlayerControl
             
             if (TryGetComponent(out FinishTaskListener task))
                 task.FinishTask();
+            if (TryGetComponent(out PlayRandomSound soundPlayer))
+                soundPlayer.PlayRandom();
             try
             {
                 GlobalInstance.Instance.UIManager.captionPool.EnqueueCaption(_shakeWords[Random.Range(0,_shakeWords.Count-1)], 2f);
             }
-            catch { }
+            catch { Debug.Log("ArmCheck cannot get CaptionPool Class"); }
         }
         public string GetDescription()
         {

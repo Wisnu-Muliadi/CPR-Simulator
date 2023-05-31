@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using PlayerControl;
 
 public class GlobalInstance : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GlobalInstance : MonoBehaviour
     public TaskManager TaskManager { get; private set; }
 
     public Camera mainCam;
+    public CPRMainManager MainCPRMgr;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)

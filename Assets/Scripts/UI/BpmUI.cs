@@ -21,7 +21,7 @@ namespace UserInterface {
         private Color _colorOk, _colorExpire;
 
         [SerializeField] private AnimationCurve _sliderTimeCurve;
-        float _bpmTimer = 0;
+        public float BpmTimer = 0;
         readonly Collider2D[] _colliders = new Collider2D[1];
 
         float _bpmCounter;
@@ -32,7 +32,8 @@ namespace UserInterface {
         int _cprPushCount;
         float _pulseTimer;
         public UnityEvent hitEvent;
-        bool _missed;
+        [SerializeField] UnityEvent<bool> _expireEvent;
+        bool _missed, _pastHalf;
 
         void Start()
         {
@@ -40,17 +41,42 @@ namespace UserInterface {
             _bpmHitImg = _bpmHitBar.GetComponent<Image>();
             _counterTransform = _bpmUICounter.GetComponent<RectTransform>();
             _cprPushCount = 0;
+
+            _pastHalf = true;
         }
         void Update()
         {
             UpdateTimerBar();
         }
+        void FixedUpdate()
+        {
+            BpmTimer += Time.fixedDeltaTime;
+        }
         void UpdateTimerBar()
         {
-            _bpmTimer += Time.deltaTime;
-            _bpmTimer = Mathf.Repeat(_bpmTimer, 1);
             _lastHitTime += Time.deltaTime;
-            _bpmHelperBar.value = _sliderTimeCurve.Evaluate(_bpmTimer);
+            _bpmHelperBar.value = _sliderTimeCurve.Evaluate(BpmTimer);
+            //PassingHitCheck();
+        }
+        void PassingHitCheck()
+        {
+            switch(_pastHalf)
+            {
+                case true:
+                    if (_bpmHelperBar.value > .75f)
+                    {
+                        //
+                        _pastHalf = false;
+                    }
+                    break;
+                case false:
+                    if (_bpmHelperBar.value > .25f)
+                    {
+                        //
+                        _pastHalf = true;
+                    }
+                    break;
+            }
         }
         public void CPRHit()
         {
@@ -80,6 +106,7 @@ namespace UserInterface {
                 _bpmUICounter.color = _colorExpire;
                 _bpmHitImg.color = _colorExpire;
                 _cprPushCounter.color = _colorExpire;
+                _expireEvent.Invoke(false);
             }
 
             _bpmUICounter.text = _bpmCounter.ToString("0");
@@ -112,9 +139,11 @@ namespace UserInterface {
         }
         public void ResetUI()
         {
+            if (_bpmHitImg == null) return; // bandage. don't keep
             _bpmCounter = 0;
             _lastHitTime = 0;
             _cprPushCount = 0;
+            _expireEvent.Invoke(true);
 
             _bpmUICounter.color = Color.white;
             _bpmHitImg.color = _colorOk;

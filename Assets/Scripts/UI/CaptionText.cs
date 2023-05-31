@@ -20,18 +20,23 @@ namespace UserInterface
         }
         void OnEnable()
         {
+            transform.SetAsLastSibling();
             StartCoroutine(IEnable());
         }
         IEnumerator IEnable()
         {
+            CaptionPool.PoolOccupant++;
             waitDuration = new(TextDuration);
             _animation.Play("CaptionFadeIn");
             yield return waitDuration;
             _animation.Play("CaptionFadeOut");
+            yield return null;
         }
+        // called by animation event
         public void DisableText()
         {
             gameObject.SetActive(false);
+            CaptionPool.PoolOccupant--;
         }
     }
 }

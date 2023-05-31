@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22792ef999bca8459de427c2202483c, type: 3}
+  m_Name: CallScript
+  m_EditorClassIdentifier: 
+  Captions:
+  - Sentence:
+    - Halo. Apa keadaan darurat Anda?
+    CaptionColor: {r: 0.9811321, g: 0.2906372, b: 0.37517306, a: 0}
+    duration: 2.5
+  - Sentence:
+    - TOLONG KIRIM DOKTER!
+    - ADA ORANG TUMBANG...
+    CaptionColor: {r: 1, g: 1, b: 1, a: 0}
+    duration: 2
+  - Sentence:
+    - Dia kesulitan bernafas..
+    - Nadinya lemah..
+    CaptionColor: {r: 1, g: 1, b: 1, a: 0}
+    duration: 1.5
+  - Sentence:
+    - Ambulans sudah dikirim.
+    - Kira-kira 5 menit lagi akan sampai.
+    - Kamu harus mambantu Pasien selagi menunggu.
+    CaptionColor: {r: 0.9843137, g: 0.29411766, b: 0.3764706, a: 0}
+    duration: 1.5
+  - Sentence:
+    - Berikan <b>CPR</b> pada pasien.
+    - Tetap lakukan <b>CPR</b> sampai Ambulansnya tiba.
+    CaptionColor: {r: 0.9843137, g: 0.29411766, b: 0.3764706, a: 0}
+    duration: 3

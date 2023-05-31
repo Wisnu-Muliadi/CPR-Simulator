@@ -34,6 +34,10 @@ namespace UserInterface
             _count = false;
             _fillArea = _breathBar.fillRect.GetComponent<Image>();
         }
+        void OnEnable()
+        {
+            _breathBar.value = 0;
+        }
         void Update()
         {
             if (_count)

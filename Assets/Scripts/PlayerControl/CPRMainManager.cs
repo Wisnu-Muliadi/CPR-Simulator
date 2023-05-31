@@ -51,6 +51,7 @@ namespace PlayerControl
         }
         void OnDisable()
         {
+            if (_playerHands == null) return; // bandage. don't keep
             _playerHands.enabled = false;
         }
         void Start()
@@ -72,14 +73,14 @@ namespace PlayerControl
             switch (camState)
             {
                 case CamState.Overview:
-                    HandleSelection();
+                    //HandleSelection(); // [Deprecated, Changed to using UIs]
                     break;
                 case CamState.Head:
                     if (!cprCamPasser.ActiveCam(1))
                     {
                         cprCamPasser.ActivateCam(1, true);
                         cprCamCtrl.StartCoroutine(nameof(cprCamCtrl.IRealignCprRoot));
-                        StartCoroutine(ICheckingHead()); //last minute addition. should do better than this
+                        StartCoroutine(ICheckingHead()); //sequence check nafas pasien. last minute mess
                         _camChangeState.onEnterHead.Invoke();
                     }
                     break;
@@ -110,6 +111,7 @@ namespace PlayerControl
                     break;
             }
         }
+        /*
         private void HandleSelection()
         {
             mouseRay = thisCam.ScreenPointToRay(Input.mousePosition);
@@ -135,7 +137,7 @@ namespace PlayerControl
             {
                 eventUI_Enable.Invoke(false);
             }
-        }
+        }*/
         private void CheckExit()
         {
             if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))

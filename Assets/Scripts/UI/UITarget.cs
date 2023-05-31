@@ -10,9 +10,12 @@ namespace UserInterface
     public class UITarget : MonoBehaviour
     {
         public SkinnedMeshRenderer patientRenderer;
-        Image _image;
+
         RectTransform _rectTransform;
+        Image _image;
         TextMeshProUGUI _text;
+        TrackingUI _trackingUI;
+        ICPRable cprAble;
         
         void OnEnable()
         {
@@ -25,7 +28,7 @@ namespace UserInterface
             if(_text == null)
                 _text = _rectTransform.GetComponentInChildren<TextMeshProUGUI>();
 
-            if (transform.parent.TryGetComponent(out ICPRable cprAble))
+            if (transform.parent.TryGetComponent(out cprAble))
             {
                 _text.text = cprAble.GetDescription();
             }
@@ -33,10 +36,17 @@ namespace UserInterface
             {
                 _text.text = cprAble.GetDescription();
             }
+            if(_trackingUI != null && cprAble != null)
+                _trackingUI.AssignCPRAble(cprAble);
         }
         void Start()
         {
-            _image = _rectTransform.GetComponent<Image>();
+            if (_rectTransform != null)
+            {
+                _image = _rectTransform.GetComponent<Image>();
+                _trackingUI = _rectTransform.GetComponent<TrackingUI>();
+                _trackingUI.AssignCPRAble(cprAble);
+            }
         }
         void Update()
         {
@@ -58,6 +68,16 @@ namespace UserInterface
         {
             if (_rectTransform != null)
                 _rectTransform.gameObject.SetActive(false);
+        }
+        public void Disallow()
+        {
+            _image.CrossFadeAlpha(.5f, .2f, true);
+            _trackingUI.Disallow();
+        }
+        public void Allow()
+        {
+            _image.CrossFadeAlpha(1f, .2f, true);
+            _trackingUI.Allow();
         }
     }
 }

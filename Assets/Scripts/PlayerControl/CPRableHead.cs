@@ -35,7 +35,7 @@ namespace PlayerControl
                 GlobalInstance.Instance.UIManager.loadingCircle.SetActive(false);
                 GlobalInstance.Instance.UIManager.captionPool.EnqueueCaption("Dia <b>kesulitan bernafas!</b>", 3f);
             }
-            catch { }
+            catch { Debug.Log("HeadCheck Can't get Loading Circle or CaptionPool Class"); }
         }
 
     }
