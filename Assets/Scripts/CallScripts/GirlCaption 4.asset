@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d22792ef999bca8459de427c2202483c, type: 3}
+  m_Name: GirlCaption 4
+  m_EditorClassIdentifier: 
+  Captions:
+  - Sentence:
+    - Ambulans akan dikirim kemari.
+    - Sambil menunggu, tugasmu adalah memberi <b><color=white>CPR</color></b>
+    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    duration: 1.6
+  - Sentence:
+    - Letak kedua tanganmu di tengah dada pasien!
+    - Perkirakan di atas jantung pasien.
+    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    duration: 1
+  - Sentence:
+    - Beri dorongan kuat sejauh <b><color=white>5 cm</color></b>!
+    - Tekan secepat <b><color=white>120 kali per menit</color></b>
+    - Setelah <b>30 kali</b> tekanan. <b><color=yellow>Berhenti</color></b> dan <b><color=yellow>berikan
+      nafas buatan</color></b>
+    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    duration: 2.4

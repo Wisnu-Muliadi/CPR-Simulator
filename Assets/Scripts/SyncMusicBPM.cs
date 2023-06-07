@@ -10,18 +10,26 @@ public class SyncMusicBPM : MonoBehaviour
     [SerializeField] BpmUI _bpmUI;
     [SerializeField] Animation _animation;
 
-    void Start()
+    void Awake()
     {
         _audioSource = gameObject.AddComponent<AudioSource>();
         _audioSource.bypassEffects = true;
         _audioSource.bypassReverbZones = true;
+        enabled = false;
+    }
+    void Update()
+    {
+        if (_audioSource.isPlaying)
+        {
+            _bpmUI.BpmTimer = _audioSource.time;
+            _bpmUI.enabled = true;
+            _animation.Play();
+            enabled = false;
+        }
     }
     public void SyncStart()
     {
         _audioSource.PlayOneShot(_music);
-        _bpmUI.BpmTimer = _audioSource.time;
-        _bpmUI.enabled = true;
-        if (_animation != null)
-            _animation.Play();
+        enabled = true;
     }
 }

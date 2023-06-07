@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 using CPR_Camera;
 
@@ -8,6 +9,7 @@ namespace PlayerControl
 {
     public interface ICPRable
     {
+        UnityAction InteractAction { get; set; }
         void Interact(CPRMainManager cprMainControl);
         string GetDescription();
     }
@@ -16,11 +18,14 @@ namespace PlayerControl
         [HideInInspector] public CPR_CamPasser cprCamPasser;
         [HideInInspector] public CPR_CamController cprCamCtrl;
         [HideInInspector] public PlayerCPRTargeting cprTargeting;
+        public bool disableExit = false;
 
         [SerializeField] SkinnedMeshRenderer _playerHands;
         public UnityEvent<string> eventUI_Update;
         public UnityEvent<bool> eventUI_Enable;
         [SerializeField, Tooltip("CPR Push depth first in!")] List<GameObject> _bpmUI = new();
+        [SerializeField] Image _pulseAnimImage;
+        bool _expired = false;
         [SerializeField] GameObject _giveBreathUI; // anybetterway?
         public enum CamState
         {
@@ -51,6 +56,13 @@ namespace PlayerControl
         }
         void OnDisable()
         {
+            camState = CamState.Overview;
+            if(cprCamPasser != null)
+            {
+                cprCamPasser.ActivateCam(1, false);
+                cprCamPasser.ActivateCam(2, false);
+                cprCamPasser.ActivateCam(3, false);
+            }
             if (_playerHands == null) return; // bandage. don't keep
             _playerHands.enabled = false;
         }
@@ -58,8 +70,7 @@ namespace PlayerControl
         {
             thisCam = GetComponent<Camera>();
             _prevState = camState;
-            foreach (GameObject gObj in _bpmUI)
-                gObj.SetActive(false);
+            EnableCPRUI(false);
             if (_giveBreathUI != null) _giveBreathUI.SetActive(false);
         }
         void Update()
@@ -88,8 +99,7 @@ namespace PlayerControl
                     if (!cprCamPasser.ActiveCam(2))
                     {
                         cprCamPasser.ActivateCam(2, true);
-                        foreach (GameObject gObj in _bpmUI)
-                            gObj.SetActive(true);
+                        EnableCPRUI(true);
                         cprCamCtrl.StartCoroutine(nameof(cprCamCtrl.IRealignCprRoot));
                         _camChangeState.onEnterChest.Invoke();
                     }
@@ -140,7 +150,8 @@ namespace PlayerControl
         }*/
         private void CheckExit()
         {
-            if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape))
+            if (disableExit) return;
+            if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Phone"))
             {
                 if (camState != CamState.Overview && camState != CamState.Head)
                 {
@@ -157,14 +168,27 @@ namespace PlayerControl
                 eventUI_Enable.Invoke(false);
             }
         }
+        public void Expired(bool expired)
+        {
+            _expired = expired;
+        }
+        public void DisableExit(bool disable)
+        {
+            disableExit = disable;
+        }
+        private void EnableCPRUI(bool enable)
+        {
+            foreach (GameObject gObj in _bpmUI)
+                gObj.SetActive(enable);
+            _pulseAnimImage.enabled = enable && !_expired;
+        }
         private void ReturnToOverview()
         {
             camState = CamState.Overview;
             cprCamPasser.ActivateCam(1, false);
             cprCamPasser.ActivateCam(2, false);
             cprCamPasser.ActivateCam(3, false);
-            foreach (GameObject gObj in _bpmUI)
-                gObj.SetActive(false);
+            EnableCPRUI(false);
             if (_giveBreathUI != null) _giveBreathUI.SetActive(false);
             _camChangeState.onEnterOverview.Invoke();
         }

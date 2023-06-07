@@ -8,7 +8,9 @@ namespace UserInterface {
     public class InteractTargetManager : MonoBehaviour
     {
         public static InteractTargetManager Instance;
+        [Tooltip("Use SetActiveUiTargets() to enable specific target")]public bool TutorialOverride = false;
 
+        [SerializeField] bool _startShowUI = false;
         [SerializeField] Sprite _iInteractableUI, _iCPRableUI;
         [SerializeField] List<RectTransform> _uiTargetsPool;
         [SerializeField] SkinnedMeshRenderer _patientRenderer;
@@ -42,7 +44,7 @@ namespace UserInterface {
             foreach (TargetClass target in _targetObjects)
                 target.AssignUITarget(_patientRenderer);
             SwitchToCPRSprites(false);
-            DisableTargets();
+            if(!_startShowUI) DisableTargets();
         }
         public RectTransform GetTargetTransform()
         {
@@ -54,6 +56,10 @@ namespace UserInterface {
                     return _uiTargetsPool[i];
             }
             return null;
+        }
+        public void SetActiveUiTarget(int index)
+        {
+            _targetObjects[index].UITarget.enabled = true;
         }
         public void SwitchToCPRSprites(bool inCprMode)
         {
@@ -78,22 +84,18 @@ namespace UserInterface {
         }
         private void TargetsCPRMode(bool inCprMode)
         {
-            switch(inCprMode)
+            if (TutorialOverride) return;
+            foreach (TargetClass target in _targetObjects)
             {
-                case true:
-                    foreach (TargetClass target in _targetObjects)
-                    {
-                        if (target.CPRAble) target.UITarget.enabled = true;
-                        else target.UITarget.enabled = false;
-                    }
-                    break;
-                case false:
-                    foreach (TargetClass target in _targetObjects)
-                    {
-                        if (target.Interactable) target.UITarget.enabled = true;
-                        else target.UITarget.enabled = false;
-                    }
-                    break;
+                switch (inCprMode)
+                {
+                    case true:
+                        target.UITarget.enabled = target.CPRAble;
+                        break;
+                    case false:
+                        target.UITarget.enabled = target.Interactable;
+                        break;
+                }
             }
         }
         private void SwapSprite(Sprite sprite)

@@ -19,6 +19,8 @@ namespace UserInterface {
         [Space]
         [SerializeField]
         private Color _colorOk, _colorExpire;
+        float _greenBlue;
+        [SerializeField] Image _cprPulsesHelper;
 
         [SerializeField] private AnimationCurve _sliderTimeCurve;
         public float BpmTimer = 0;
@@ -28,12 +30,12 @@ namespace UserInterface {
         float _lastHitTime;
 
         const int _cprPushLimit = 30;
-        const float _delayInput = .25f;
+        const float _delayInput = .2f;
         int _cprPushCount;
         float _pulseTimer;
         public UnityEvent hitEvent;
         [SerializeField] UnityEvent<bool> _expireEvent;
-        bool _missed, _pastHalf;
+        bool _missed; bool _invokedExpire = false;
 
         void Start()
         {
@@ -41,8 +43,6 @@ namespace UserInterface {
             _bpmHitImg = _bpmHitBar.GetComponent<Image>();
             _counterTransform = _bpmUICounter.GetComponent<RectTransform>();
             _cprPushCount = 0;
-
-            _pastHalf = true;
         }
         void Update()
         {
@@ -51,38 +51,18 @@ namespace UserInterface {
         void FixedUpdate()
         {
             BpmTimer += Time.fixedDeltaTime;
+            _lastHitTime += Time.fixedDeltaTime;
         }
         void UpdateTimerBar()
         {
-            _lastHitTime += Time.deltaTime;
             _bpmHelperBar.value = _sliderTimeCurve.Evaluate(BpmTimer);
-            //PassingHitCheck();
-        }
-        void PassingHitCheck()
-        {
-            switch(_pastHalf)
-            {
-                case true:
-                    if (_bpmHelperBar.value > .75f)
-                    {
-                        //
-                        _pastHalf = false;
-                    }
-                    break;
-                case false:
-                    if (_bpmHelperBar.value > .25f)
-                    {
-                        //
-                        _pastHalf = true;
-                    }
-                    break;
-            }
         }
         public void CPRHit()
         {
             if (_lastHitTime < _delayInput || _pushDepthBar.value == 0) return;
             _bpmCounter = 60 / _lastHitTime;
-            if (_lastHitTime > .65f) _missed = true;
+            _bpmCounter = Mathf.Round(_bpmCounter);
+            if (_lastHitTime > .65f || _lastHitTime < .4f) _missed = true;
             _lastHitTime = 0;
 
             _cprPushCount++;
@@ -95,18 +75,29 @@ namespace UserInterface {
                     {
                         _bpmCounter = 120;
                         StartCoroutine(IPulseBPMCounter(.2f));
-                    } else
-                        _bpmUICounter.color = Color.white;
+                    }
+                    else
+                    {
+                        _greenBlue = .0083f * Mathf.PingPong(_bpmCounter, 120);
+                        _bpmUICounter.color = new Color(1f, _greenBlue, _greenBlue);
+                    }
                     StartCoroutine(IPulseHitBar(.2f));
                 }
-                else _bpmUICounter.color = Color.white;
+                else
+                {
+                    _greenBlue = .0083f * Mathf.PingPong(_bpmCounter, 120);
+                    _bpmUICounter.color = new Color(1f, _greenBlue, _greenBlue);
+                    if(_bpmCounter == 120) StartCoroutine(IPulseBPMCounter(.2f));
+                }
             }
             else
             {
                 _bpmUICounter.color = _colorExpire;
                 _bpmHitImg.color = _colorExpire;
                 _cprPushCounter.color = _colorExpire;
-                _expireEvent.Invoke(false);
+                _cprPulsesHelper.enabled = false;
+                if(!_invokedExpire)_expireEvent.Invoke(true);
+                _invokedExpire = true;
             }
 
             _bpmUICounter.text = _bpmCounter.ToString("0");
@@ -114,7 +105,8 @@ namespace UserInterface {
         }
         public float GetBPM()
         {
-            return Mathf.Round(_bpmCounter);
+            if (_bpmCounter > 130) return 0;
+            return _bpmCounter;
         }
         IEnumerator IPulseHitBar(float duration)
         {
@@ -139,11 +131,12 @@ namespace UserInterface {
         }
         public void ResetUI()
         {
-            if (_bpmHitImg == null) return; // bandage. don't keep
+            if (_bpmHitImg == null) return; // bandage. technical debt
             _bpmCounter = 0;
             _lastHitTime = 0;
             _cprPushCount = 0;
-            _expireEvent.Invoke(true);
+            _expireEvent.Invoke(false);
+            _invokedExpire = false;
 
             _bpmUICounter.color = Color.white;
             _bpmHitImg.color = _colorOk;

@@ -19,8 +19,10 @@ namespace CardiacPatient
         [HideInInspector] public GameObject InstancedCamera;
         [SerializeField, Tooltip("Also Instanced on First Chest Colliders")]
         private GameObject _chestIKRoot;
+        [SerializeField] Vector3 _chestOffset = Vector3.zero;
         [SerializeField, Tooltip("Instanced on Head Collider")]
         private GameObject _headIKRoot;
+        [SerializeField] Vector3 _headOffset = Vector3.zero;
         readonly private GameObject[] _instancedIKRoot = new GameObject[2];
 
         private AnimationController.AnimatorController _animatorController;
@@ -34,15 +36,21 @@ namespace CardiacPatient
         [SerializeField] CprButtonUILogic _cprButtonUILogic;
         [SerializeField] GiveBreathUILogic _giveBreathUILogic;
 
+        [SerializeField] bool _deployInteractablesOnStart = false;
+
+        private void Awake()
+        {
+            if (_deployInteractablesOnStart) DeployInteractable();
+        }
         private void Start()
         {
             _animatorController = _patient.GetComponentInChildren<AnimationController.AnimatorController>();
             _puppetController = _patient.GetComponentInChildren<AnimationController.PuppetMasterController>();
             // Positioning IK Instances
             _instancedIKRoot[0] = Instantiate(_chestIKRoot, _chestColliders[0].transform);
-            _instancedIKRoot[0].transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(0, 0, 0));
+            _instancedIKRoot[0].transform.SetLocalPositionAndRotation(_chestOffset, Quaternion.Euler(0, 0, 0));
             _instancedIKRoot[1] = Instantiate(_headIKRoot, headCollider.transform);
-            _instancedIKRoot[1].transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.Euler(0, 0, 0));
+            _instancedIKRoot[1].transform.SetLocalPositionAndRotation(_headOffset, Quaternion.Euler(0, 0, 0));
 
             ChestCollider = _chestColliders[0];
         }
@@ -61,7 +69,7 @@ namespace CardiacPatient
             GlobalInstance.Instance.UIManager.MouseDisplayAdd(true);
             if (TryGetComponent(out CardiacPatientMuscles cardiacPatientMuscles))
                 cardiacPatientMuscles.StartAttend();
-            _animatorController.animator.SetBool("Attended", true);
+            if(_animatorController) _animatorController.animator.SetBool("Attended", true);
             GameObject upperChest = _chestColliders[0];
             // Instance Camera to Patient
             Rigidbody chestRigidbody = upperChest.GetComponent<Rigidbody>();
@@ -130,7 +138,7 @@ namespace CardiacPatient
             GlobalInstance.Instance.mainCam.GetComponent<CPRMainManager>().SetCPRCam(null);
             if (TryGetComponent(out CardiacPatientMuscles cardiacPatientMuscles))
                 cardiacPatientMuscles.StopAttend();
-            _animatorController.animator.SetBool("Attended", false);
+            if(_animatorController) _animatorController.animator.SetBool("Attended", false);
             if (_healthUI != null) _healthUI.SetPatient(null);
 
             CinemachineVirtualCamera[] cprVirtualCams = InstancedCamera.GetComponentsInChildren<CinemachineVirtualCamera>();

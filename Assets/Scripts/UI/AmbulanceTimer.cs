@@ -21,7 +21,7 @@ namespace UserInterface
         {
             _currTime = Mathf.MoveTowards(_currTime, _waitDuration, Time.deltaTime);
             _ambulanceSlider.value = _currTime;
-            if (_currTime >= 300)
+            if (_currTime >= _waitDuration)
             {
                 _ambulanceArrived.Invoke();
                 enabled = false;

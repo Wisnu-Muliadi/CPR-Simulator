@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PlayerControl
 {
     public class CPRableArm : MonoBehaviour, ICPRable
     {
+        public UnityAction InteractAction { get; set; }
         private Rigidbody _rb;
         
         private bool _shake;
@@ -54,6 +56,7 @@ namespace PlayerControl
                 yield return null;
             }
             _shake = false;
+            InteractAction?.Invoke();
         }
     }
 }

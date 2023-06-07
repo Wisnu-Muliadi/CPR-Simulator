@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TaskCallingHelp
   m_EditorClassIdentifier: 
   Tasks:
-  - Hubungi Layanan Darurat <b>112</b> (<b>P</b> for Phone)
+  - Hubungi Layanan Darurat <b><color=yellow>112</color></b> <color=yellow>(<b>P</b>
+    for Phone)</color>

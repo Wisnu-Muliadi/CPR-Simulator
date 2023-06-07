@@ -15,4 +15,4 @@ MonoBehaviour:
   Tasks:
   - CPR sedalam <b>5cm</b> secepat <b>120 kali perdetik</b>
   - Beri <b>2 Nafas Buatan</b> setelah <b>30 kompresi dada</b>.
-  - Jika pasien masih kesulitan bernafas, ulangi terus sampai <b>Tim Medis</b> tiba
+  - Ulangi sampai <b>Tim Medis</b> tiba. Berhenti jika Pasien dapat Bernafas Kembali.

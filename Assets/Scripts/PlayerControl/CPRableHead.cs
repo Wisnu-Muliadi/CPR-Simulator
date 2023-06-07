@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace PlayerControl
 {
     public class CPRableHead : MonoBehaviour, ICPRable
     {
+        public UnityAction InteractAction { get; set; }
         WaitForSecondsRealtime waitASec = new(1.5f);
         public void Interact(CPRMainManager playerCam)
         {
             playerCam.camState = CPRMainManager.CamState.Head;
-
+            
             StartCoroutine(IDelayFinishTask());
         }
         public string GetDescription()
@@ -25,7 +27,8 @@ namespace PlayerControl
         private IEnumerator IDelayFinishTask()
         {
             yield return waitASec;
-            GetComponentInParent<CardiacPatient.CardiacPatientAnimator>().AnimatorGasp(); //expensivee ?
+            CardiacPatient.CardiacPatientAnimator cAnimator = GetComponentInParent<CardiacPatient.CardiacPatientAnimator>();
+            if (cAnimator) cAnimator.AnimatorGasp(); //expensivee ?
             yield return waitASec;
             if (TryGetComponent(out FinishTaskListener task))
                 task.FinishTask();
@@ -36,6 +39,7 @@ namespace PlayerControl
                 GlobalInstance.Instance.UIManager.captionPool.EnqueueCaption("Dia <b>kesulitan bernafas!</b>", 3f);
             }
             catch { Debug.Log("HeadCheck Can't get Loading Circle or CaptionPool Class"); }
+            InteractAction?.Invoke();
         }
 
     }

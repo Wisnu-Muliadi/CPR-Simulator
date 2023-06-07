@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace CardiacPatient
 {
@@ -10,6 +11,7 @@ namespace CardiacPatient
         CardiacPatientStats _patientStats;
         [SerializeField]
         Rigidbody _chestRb;
+        [SerializeField] UnityEvent _pushChestEvent;
 
         private float _timer;
         private bool _givingBreath = false;
@@ -20,7 +22,7 @@ namespace CardiacPatient
         }
         public void HandleResuscitation(float effectiveness, float pushDepth)
         {
-            StartCoroutine(IPushChest(.12f * pushDepth, pushDepth));
+            StartCoroutine(IPushChest(.2f * pushDepth, pushDepth));
             _patientStats.Resuscitate(effectiveness);
         }
         public void HandleGiveOxygen(float effectiveness, bool niceBonus)
@@ -35,14 +37,16 @@ namespace CardiacPatient
         }
         private IEnumerator IPushChest(float time, float effectiveness)
         {
+            _pushChestEvent.Invoke();
             _timer = 0;
             while (_timer < time)
             {
                 _timer += Time.deltaTime;
-                _chestRb.AddForce(2 * effectiveness * Vector3.down, ForceMode.VelocityChange);
+                _chestRb.AddForce(3 * effectiveness * Vector3.down, ForceMode.VelocityChange);
                 yield return null;
             }
         }
+        /*
         private IEnumerator IGiveBreath(float time)
         {
             _givingBreath = true;
@@ -54,6 +58,6 @@ namespace CardiacPatient
                 yield return null;
             }
             _givingBreath = false;
-        }
+        }*/
     }
 }

@@ -9,10 +9,20 @@ namespace PlayerControl
     {
         [SerializeField] TextMeshPro _textObject;
         [SerializeField] Animator _animator;
+        [SerializeField] GameObject _toEnable;
+        [SerializeField] GameObject _toDisable;
+
+        [SerializeField] EnterLevelScene _enterLevelScript;
+        [SerializeField] int _changeTargetScene;
         bool showText;
         public void Interact()
         {
-            _animator.SetTrigger("Dance");
+            showText = false;
+            _textObject.enabled = showText;
+            _enterLevelScript.TargetGameSceneIndex = _changeTargetScene;
+            _toEnable.SetActive(true);
+            _animator.SetTrigger("Interact");
+            _toDisable.SetActive(false);
         }
 
         public void ShowText()

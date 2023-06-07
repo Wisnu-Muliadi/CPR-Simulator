@@ -8,9 +8,10 @@ namespace PlayerControl
 {
     public class PhoneCallController : MonoBehaviour
     {
+        [SerializeField] bool _isTutorial = false;
         [SerializeField] private TMP_InputField _phoneInputField;
         [SerializeField] private Animator _phoneAnimator;
-        [SerializeField] private UnityEvent _enterCallEvent = new();
+        public UnityEvent EnterCallEvent = new();
         [SerializeField, Tooltip("false when Using Phone")] private UnityEvent<bool> _notUsingPhone = new();
         private string _numberField = "";
         private bool _phoneActive = false;
@@ -50,6 +51,11 @@ namespace PlayerControl
                 GlobalInstance.Instance.UIManager.MouseDisplayAdd(false);
             }
         }
+        public void PhoneSlideOut()
+        {
+            _phoneAnimator.Play("PhoneSlideIn", 1, 1);
+            _phoneAnimator.SetFloat("Speed", -1);
+        }
         private void UpdateField() => _phoneInputField.text = _numberField;
         public void AddNumber(string number)
         {
@@ -78,9 +84,17 @@ namespace PlayerControl
             enabled = false;
             _notUsingPhone.Invoke(true);
             yield return new WaitForSecondsRealtime(1.6f);
-            _phoneAnimator.Play("PhoneSlideDown", 1, .5f);
-            _enterCallEvent.Invoke();
-            GlobalInstance.Instance.UIManager.MouseDisplayAdd(false);
+            if (_isTutorial)
+            {
+                UsePhone();
+                yield return new WaitForSecondsRealtime(1.6f);
+            }
+            else
+            {
+                _phoneAnimator.Play("PhoneSlideDown", 2, .5f);
+                GlobalInstance.Instance.UIManager.MouseDisplayAdd(false);
+            }
+            EnterCallEvent.Invoke();
         }
     }
 }

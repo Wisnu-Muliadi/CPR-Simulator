@@ -31,7 +31,7 @@ namespace PlayerControl
             }
             catch
             {
-                
+                Debug.LogWarning("Breath UI Logic missing!");
             }
         }
         void OnDisable()

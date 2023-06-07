@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UserInterface;
 
+// this can benefit from refactoring ..
 public class TaskManager : MonoBehaviour
 {
     [SerializeField] private TaskUILogic _taskUI;
@@ -87,6 +88,7 @@ public class TaskManager : MonoBehaviour
         if (_taskUI.CurrentTaskIndex < _taskUI.tasks.Count)
         {
             _taskUI.RefreshTask();
+            _taskUI.TaskBarPulse();
             ResetBools();
             UpdateTaskListeners();
         }

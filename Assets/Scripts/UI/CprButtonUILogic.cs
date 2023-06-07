@@ -20,7 +20,7 @@ namespace UserInterface
         [SerializeField] Vector3 _growScale;
         private Vector3 _originalScale;
 
-        private float _hitBpm;
+        private float _hitEfficiency;
         private float _pushDepth;
         private float _sum;
 
@@ -66,21 +66,20 @@ namespace UserInterface
 
             switch (_pushDepthBar.value)
             {
-                case 1:
+                case var _ when _pushDepthBar.value <= 3:
                     _pushDepth = .2f;
                     break;
-                case 3:
+                case var _ when _pushDepthBar.value >= 6:
                     _logic.HurtPatient(.5f);
-                    _pushDepth = .5f * _pushDepthBar.value;
+                    _pushDepth = 1f;
                     break;
                 default:
-                    _pushDepth = .5f * _pushDepthBar.value;
+                    _pushDepth = .2f * _pushDepthBar.value;
                     break;
             }
-            // Forgotten Magic Number
-            _hitBpm = 0.008f * Mathf.PingPong(_bpmUIScript.GetBPM(), 120f);
-            _sum =  Mathf.Clamp01(_pushDepth * _hitBpm);
-
+            // .0083 is approx 1/120. Used to avoid using division :P
+            _hitEfficiency = 0.0083f * Mathf.PingPong(_bpmUIScript.GetBPM(), 120f);
+            _sum =  Mathf.Clamp01(_pushDepth * _hitEfficiency);
             _logic.HandleResuscitation(_sum, _pushDepth);
         }
         public void SetPatient(Patient patient)

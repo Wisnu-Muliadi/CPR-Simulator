@@ -8,13 +8,13 @@ namespace UserInterface
     public class TaskUILogic : MonoBehaviour
     {
         [SerializeField] GameObject _taskInstance;
-        [SerializeField] Animation _currentAnimation;
+        [SerializeField] Animation _currentAnimation; // still hardcoded animation player. could be better
         [SerializeField] bool _immediatelySlideIn;
         public int ListSize = 3;
         public int CurrentTaskIndex = 0;
 
         private readonly List<GameObject> _taskListInstances = new();
-        private readonly List<Animation> _tasksAnimations = new();
+        private readonly List<Animation> _tasksAnimations = new();// still hardcoded animation player. could be better
         public List<TaskScriptableObject> tasks = new();
         
         [Space, Header("for Testing in Editor")]
@@ -67,6 +67,10 @@ namespace UserInterface
         public void TaskPulseIn(int index)
         {
             _tasksAnimations[index].Play("Task UI Pulse");
+        }
+        public void TaskBarPulse()
+        {
+            _currentAnimation.Play("Task UI Pulse");
         }
 
         // presumably unused

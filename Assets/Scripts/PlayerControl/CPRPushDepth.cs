@@ -9,9 +9,12 @@ namespace PlayerControl
     public class CPRPushDepth : MonoBehaviour
     {
         private Slider _slider;
+        [SerializeField] TextMeshProUGUI _depthText;
         [SerializeField] GameObject[] _objectsToHide;
         [SerializeField] Image[] _images;
         [SerializeField] TextMeshProUGUI[] _texts;
+
+        float _greenBlue = 0;
         void Awake()
         {
             _slider = GetComponent<Slider>();
@@ -45,6 +48,12 @@ namespace PlayerControl
                     }
                     break;
             }
+        }
+        public void UpdateDepth()
+        {
+            _depthText.text = _slider.value.ToString("0.0") + "cm";
+            _greenBlue = .2f * Mathf.PingPong(_slider.value, 5);
+            _depthText.color = new Color(1f, _greenBlue, _greenBlue);
         }
     }
 }

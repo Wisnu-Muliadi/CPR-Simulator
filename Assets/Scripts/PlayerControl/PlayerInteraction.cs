@@ -8,6 +8,7 @@ namespace PlayerControl
 {
     public interface IInteractable
     {
+        UnityAction InteractAction { get; set; }
         void Interact(PlayerInteraction player);
 
         string GetDescription();
@@ -48,10 +49,12 @@ namespace PlayerControl
                 IInteractable interactable = hitinfo.collider.GetComponent<IInteractable>();
                 if (interactable == null)
                 {
+                    //Debug.DrawLine(ray.origin, ray.GetPoint(_rayDistance), Color.blue);
                     eventUI_Enable.Invoke(false);
                 }
                 else
                 {
+                    //Debug.DrawLine(ray.origin, ray.GetPoint(_rayDistance), Color.green);
                     eventUI_Enable.Invoke(true);
                     eventUI_Update.Invoke(interactable.GetDescription());
                     if (Input.GetButtonDown("Interact"))
@@ -63,6 +66,7 @@ namespace PlayerControl
             }
             else
             {
+                //Debug.DrawLine(ray.origin, ray.GetPoint(_rayDistance), Color.white);
                 eventUI_Enable.Invoke(false);
             }
         }

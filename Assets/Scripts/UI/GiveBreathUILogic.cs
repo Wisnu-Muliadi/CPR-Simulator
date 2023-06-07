@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using TMPro;
 using CardiacPatient;
 
 namespace UserInterface
@@ -16,8 +17,9 @@ namespace UserInterface
         CardiacPatientLogic _logic;
 
         [SerializeField] Slider _breathBar;
+        [SerializeField] TextMeshProUGUI _percentText;
         [SerializeField] Animator _popUpAnimator;
-        [SerializeField] Color _low, _high;
+        float _greenBlue = 0;
         [SerializeField] float _delayForEachGive = 3f;
         private Image _fillArea;
 
@@ -44,7 +46,9 @@ namespace UserInterface
             {
                 _timer += Time.deltaTime * _breathSpeed;
                 _breathBar.value = Mathf.PingPong(_timer, 1f);
-                _fillArea.color = Color.Lerp(_low, _high, _breathBar.value);
+                _greenBlue = _breathBar.value;
+                _percentText.text = (100f * _breathBar.value).ToString("0") + "%";
+                _fillArea.color = new Color(1f - _greenBlue, _greenBlue, 0f);
             }
         }
         
@@ -71,6 +75,7 @@ namespace UserInterface
             {
                 _popUpAnimator.Play("PopUp");
                 _breathBar.value = 1;
+                _percentText.text = "100%";
                 _nice = true;
             }
             StartCoroutine(IDelayNextGive(_delayForEachGive));
