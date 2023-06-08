@@ -263,6 +263,7 @@ MonoBehaviour:
   _colorOk: {r: 0, g: 1, b: 0, a: 1}
   _colorExpire: {r: 0.627451, g: 0.627451, b: 0.627451, a: 1}
   _cprPulsesHelper: {fileID: 7128764517394531777}
+  _bpmSliderHelper: {fileID: 2317378598203110629}
   _sliderTimeCurve:
     serializedVersion: 2
     m_Curve:
@@ -1076,7 +1077,7 @@ MonoBehaviour:
   _pushDepthBar: {fileID: 2317378598476605154}
   _bpmBar: {fileID: 2317378599402819518}
   _bpmUIScript: {fileID: 2317378598261189931}
-  _growScale: {x: 1.25, y: 1.25, z: 1.25}
+  _growScale: {x: 1.15, y: 1.15, z: 1.15}
 --- !u!1 &2317378599222829080
 GameObject:
   m_ObjectHideFlags: 0
@@ -1366,7 +1367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -1841,8 +1842,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 72, y: 0}
-  m_SizeDelta: {x: 100, y: 24}
+  m_AnchoredPosition: {x: 100, y: 0}
+  m_SizeDelta: {x: 160, y: 24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &576643435357362432
 CanvasRenderer:
@@ -1900,7 +1901,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 36
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0

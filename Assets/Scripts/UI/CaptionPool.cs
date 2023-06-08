@@ -57,6 +57,7 @@ namespace UserInterface
         }
         public void CallScriptParser(CallScript callScript, UnityEvent postEvent)
         {
+            _caption.RemoveAll(x=>true);
             for(int i = 0; i < callScript.Captions.Count; i++)
             {
                 Caption cap = new();

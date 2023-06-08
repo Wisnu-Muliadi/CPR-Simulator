@@ -9,9 +9,11 @@ public class TutorialManager : MonoBehaviour
     [System.Serializable]
     public class TutorialQuest
     {
+        public string Description;
         public UnityEvent Invokes;
         public bool OneForAll = false;
         public bool CPRable = false;
+        public int Repeat = 1;
         public List<GameObject> QuestTasksObjects = new();
         [Tooltip("dont touch this one. for viewing only")]
         public List<TutorialQuestTask> QuestTasks = new();
@@ -33,11 +35,11 @@ public class TutorialManager : MonoBehaviour
     // Execute current quest
     private void ExecuteQuest()
     {
-        if (_tutorialQuests.Count == 0) return;
+        if (_currentQuestIndex >= _tutorialQuests.Count) return;
         TutorialQuest quest = _tutorialQuests[_currentQuestIndex];
         foreach (GameObject obj in quest.QuestTasksObjects)
         {
-            quest.QuestTasks.Add(obj.AddComponent<TutorialQuestTask>().ReadyTrigger(quest.CPRable));
+            quest.QuestTasks.Add(obj.AddComponent<TutorialQuestTask>().ReadyTrigger(quest.CPRable, quest.Repeat));
         }
         quest.Invokes.Invoke();
     }

@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RootMotion.Dynamics;
+using UnityEngine.Events;
 
 public class TutorialStart : MonoBehaviour
 {
-    [SerializeField] PuppetMaster _puppetMaster;
-    [SerializeField] float _delayPuppetMasterUnpin = .5f;
+    [SerializeField] UnityEvent _eventsToRun;
+    [SerializeField] float _delayToExecuteEvent = .5f;
 
 
     IEnumerator Start()
     {
-        yield return new WaitForSecondsRealtime(_delayPuppetMasterUnpin);
-        _puppetMaster.pinWeight = 0;
+        yield return new WaitForSecondsRealtime(_delayToExecuteEvent);
+        _eventsToRun.Invoke();
     }
 
 }

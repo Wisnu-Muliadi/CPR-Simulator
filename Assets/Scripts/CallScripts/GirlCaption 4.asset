@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Captions:
   - Sentence:
-    - Ambulans akan dikirim kemari.
-    - Sambil menunggu, tugasmu adalah memberi <b><color=white>CPR</color></b>
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
-    duration: 1.6
+    - <color="yellow">Ambulans</color> membutuhkan waktu untuk sampai kemari!
+    - Sambil menunggu, tugasmu adalah memberi <b><color=yellow>CPR</color></b>
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
+    duration: 2
   - Sentence:
     - Letak kedua tanganmu di tengah dada pasien!
     - Perkirakan di atas jantung pasien.
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
-    duration: 1
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
+    duration: 2
   - Sentence:
-    - Beri dorongan kuat sejauh <b><color=white>5 cm</color></b>!
-    - Tekan secepat <b><color=white>120 kali per menit</color></b>
+    - Beri dorongan kuat sejauh <b><color=yellow>5 cm</color></b>!
+    - Tekan secepat <b><color=yellow>120 kali per menit</color></b>
     - Setelah <b>30 kali</b> tekanan. <b><color=yellow>Berhenti</color></b> dan <b><color=yellow>berikan
       nafas buatan</color></b>
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
-    duration: 2.4
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
+    duration: 3

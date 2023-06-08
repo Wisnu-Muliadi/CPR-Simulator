@@ -21,6 +21,7 @@ namespace UserInterface {
         private Color _colorOk, _colorExpire;
         float _greenBlue;
         [SerializeField] Image _cprPulsesHelper;
+        [SerializeField] Image _bpmSliderHelper;
 
         [SerializeField] private AnimationCurve _sliderTimeCurve;
         public float BpmTimer = 0;
@@ -96,7 +97,8 @@ namespace UserInterface {
                 _bpmHitImg.color = _colorExpire;
                 _cprPushCounter.color = _colorExpire;
                 _cprPulsesHelper.enabled = false;
-                if(!_invokedExpire)_expireEvent.Invoke(true);
+                _bpmSliderHelper.enabled = false;
+                if (!_invokedExpire)_expireEvent.Invoke(true);
                 _invokedExpire = true;
             }
 

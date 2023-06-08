@@ -97,5 +97,14 @@ namespace PlayerControl {
             }
             this.patient = patient;
         }
+        public void NullPatient()
+        {
+            playerSit = null;
+            _attendEvents.eventStopAttendingPatient.Invoke();
+
+            this.patient.GetComponent<CardiacPatientManager>().SetupCPRInteraction();
+
+            StartCoroutine(nameof(CPRControlMode), false);
+        }
     }
 }

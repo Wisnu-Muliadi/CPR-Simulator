@@ -20,13 +20,15 @@ namespace UserInterface
         void OnEnable()
         {
             _rectTransform = InteractTargetManager.Instance.GetTargetTransform();
+            _image = _rectTransform.GetComponent<Image>();
+            _trackingUI = _rectTransform.GetComponent<TrackingUI>();
+
             if (_rectTransform != null)
                 _rectTransform.gameObject.SetActive(true);
             else
                 enabled = false;
             
-            if(_text == null)
-                _text = _rectTransform.GetComponentInChildren<TextMeshProUGUI>();
+            _text = _trackingUI.TMPText;
 
             if (transform.parent.TryGetComponent(out cprAble))
             {
@@ -36,17 +38,8 @@ namespace UserInterface
             {
                 _text.text = cprAble.GetDescription();
             }
-            if(_trackingUI != null && cprAble != null)
+            if (_trackingUI != null && cprAble != null)
                 _trackingUI.AssignCPRAble(cprAble);
-        }
-        void Start()
-        {
-            if (_rectTransform != null)
-            {
-                _image = _rectTransform.GetComponent<Image>();
-                _trackingUI = _rectTransform.GetComponent<TrackingUI>();
-                _trackingUI.AssignCPRAble(cprAble);
-            }
         }
         void Update()
         {
@@ -69,6 +62,7 @@ namespace UserInterface
             if (_rectTransform != null)
                 _rectTransform.gameObject.SetActive(false);
         }
+        // below: not yet used
         public void Disallow()
         {
             _image.CrossFadeAlpha(.5f, .2f, true);

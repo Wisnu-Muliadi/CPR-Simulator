@@ -15,8 +15,8 @@ namespace PlayerControl
         {
             if (patient.TryGetComponent(out CardiacPatientManager cpManager))
             {
-                cpManager.SetupCPRInteraction(player);
                 InteractAction?.Invoke();
+                cpManager.SetupCPRInteraction(player);
             }
         }
         public string GetDescription()

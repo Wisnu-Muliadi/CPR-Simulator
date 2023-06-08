@@ -25,6 +25,7 @@ namespace PlayerControl
         public UnityEvent<bool> eventUI_Enable;
         [SerializeField, Tooltip("CPR Push depth first in!")] List<GameObject> _bpmUI = new();
         [SerializeField] Image _pulseAnimImage;
+        [SerializeField] Image _bpmSliderHelper;
         bool _expired = false;
         [SerializeField] GameObject _giveBreathUI; // anybetterway?
         public enum CamState
@@ -176,11 +177,12 @@ namespace PlayerControl
         {
             disableExit = disable;
         }
-        private void EnableCPRUI(bool enable)
+        public void EnableCPRUI(bool enable)
         {
             foreach (GameObject gObj in _bpmUI)
                 gObj.SetActive(enable);
             _pulseAnimImage.enabled = enable && !_expired;
+            _bpmSliderHelper.enabled = enable && !_expired;
         }
         private void ReturnToOverview()
         {

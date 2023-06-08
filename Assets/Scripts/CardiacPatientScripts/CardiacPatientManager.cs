@@ -177,5 +177,12 @@ namespace CardiacPatient
             }
             headCollider.AddComponent<CPRableHead>();
         }
+        public void DestroyInteractables()
+        {
+            foreach (GameObject col in _interactableColliders)
+            {
+                Destroy(col.GetComponent<CPRInteractable>());
+            }
+        }
     }
 }

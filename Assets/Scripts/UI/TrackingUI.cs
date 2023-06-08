@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using TMPro;
 using PlayerControl;
 
 public class TrackingUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
@@ -9,6 +10,7 @@ public class TrackingUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     RectTransform _rect;
     GameObject _textObject;
     float _originalScale;
+    public TextMeshProUGUI TMPText;
 
     ICPRable _cPRable;
     readonly float _growTarget = 1.5f;

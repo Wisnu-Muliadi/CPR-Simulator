@@ -8,7 +8,7 @@ namespace UserInterface {
     public class InteractTargetManager : MonoBehaviour
     {
         public static InteractTargetManager Instance;
-        [Tooltip("Use SetActiveUiTargets() to enable specific target")]public bool TutorialOverride = false;
+        //[Tooltip("Use SetActiveUiTargets() to enable specific target")]public bool TutorialOverride = false;
 
         [SerializeField] bool _startShowUI = false;
         [SerializeField] Sprite _iInteractableUI, _iCPRableUI;
@@ -57,9 +57,35 @@ namespace UserInterface {
             }
             return null;
         }
-        public void SetActiveUiTarget(int index)
+        /*public void SetActiveUiTarget(int index)
         {
             _targetObjects[index].UITarget.enabled = true;
+        }*/
+        public void UpdateCPRAbleTargets()
+        {
+            foreach (TargetClass target in _targetObjects)
+            {
+                target.UITarget.enabled = target.CPRAble;
+            }
+        }
+        public void InteractableUiTarget(int index)
+        {
+            _targetObjects[index].Interactable = true;
+            //_targetObjects[index].UITarget.enabled = true;
+        }
+        public void CprAbleUiTarget(int index)
+        {
+            _targetObjects[index].CPRAble = true;
+            //_targetObjects[index].UITarget.enabled = true;
+        }
+        public void DisableAllTarget()
+        {
+            foreach (TargetClass target in _targetObjects)
+            {
+                target.Interactable = false;
+                target.CPRAble = false;
+                target.UITarget.enabled = false;
+            }
         }
         public void SwitchToCPRSprites(bool inCprMode)
         {
@@ -84,7 +110,7 @@ namespace UserInterface {
         }
         private void TargetsCPRMode(bool inCprMode)
         {
-            if (TutorialOverride) return;
+            //if (TutorialOverride) return;
             foreach (TargetClass target in _targetObjects)
             {
                 switch (inCprMode)

@@ -73,7 +73,7 @@ namespace UserInterface
             _currentAnimation.Play("Task UI Pulse");
         }
 
-        // presumably unused
+        // probably unused
         public bool IsInstanceActive(int index)
         {
             return _taskListInstances[index].activeSelf;
@@ -82,5 +82,11 @@ namespace UserInterface
         {
             _currentAnimation.Play("Task UI Slide In");
         }
+        public void MoveToThisTask(int index)
+        {
+            CurrentTaskIndex = index;
+            RefreshTask();
+        }
+
     }
 }

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Captions:
   - Sentence:
-    - <b>Guncang</b> <i><color=orange>Pasien</color></i> dan coba untuk bicara dengannya.
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    - <b>Guncang <color=white>Pasien</color></b> dan coba untuk <b>memanggilnya</b>.
+    CaptionColor: {r: 0.7773585, g: 1, b: 1, a: 1}
     duration: 3

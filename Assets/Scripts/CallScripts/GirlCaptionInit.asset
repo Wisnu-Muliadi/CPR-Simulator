@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Captions:
   - Sentence:
-    - Selamat Datang di Dasar <b>Pelaksanaan CPR</b>!
-    - Untuk latihan CPR kita anggap <i>dummy</i> ini adalah <i><color=orange">Pasien</color></i>
-    - Sebelum melakukan CPR, kamu perlu memeriksa dahulu kondisi <i><color=orange>Pasien</color></i>!
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    - Selamat Datang di <b><color=white>Dasar Pelatihan CPR</color></b>!
+    - Kita akan menggunakan dummy ini sebagai <color=white"><b>Pasien henti jantung
+      dewasa</b></color>
+    - Sebelum melakukan CPR, kamu perlu <b>memeriksa kondisi <color=white>Pasien</color></b>
+      dulu!
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
     duration: 4
   - Sentence:
-    - Dekati <i><color=orange>Pasien</color></i> dan berlutut di sampingnya
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    - Dekati <b><color=white>Pasien</color></b> dan berlutut di sampingnya
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
     duration: 3

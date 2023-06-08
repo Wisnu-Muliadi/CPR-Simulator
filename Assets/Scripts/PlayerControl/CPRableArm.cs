@@ -14,7 +14,7 @@ namespace PlayerControl
         private float _timer = 0;
         private float _force = 0;
 
-        private List<string> _shakeWords = new();
+        private readonly List<string> _shakeWords = new();
         void Start()
         {
             _shakeWords.Add("Hey! Bisa dengar aku?");

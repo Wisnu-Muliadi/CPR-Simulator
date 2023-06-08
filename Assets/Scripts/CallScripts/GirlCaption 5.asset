@@ -14,6 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Captions:
   - Sentence:
-    - Berhenti dan beri <b><color=yellow>nafas buatan</color></b>!
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    - Hentikan CPR.
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
+    duration: 2
+  - Sentence:
+    - 30 Kompresi yang efektif sudah mengantar seluruh-
+    - oksigen dalam darah menuju otak
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
+    duration: 3
+  - Sentence:
+    - Beri <b><color=yellow>2 nafas buatan</color></b>!
+    - Pastikan dada <color=white>pasien</color> terangkat saat memberi nafas.
+    - Pastikan juga dada <color=white>pasien</color> turun sebelum memberi nafas
+      berikutnya.
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
     duration: 3

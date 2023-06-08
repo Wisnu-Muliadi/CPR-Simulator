@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Captions:
   - Sentence:
-    - Setelah yakin pasien <b>kesulitan bernafas</b>..
-    - Segera Hubungi <color=white><b>ambulans</b></color>!
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
-    duration: 1.6
+    - Jika yakin <b><color=white>pasien</color></b> mengalami <b>henti jantung</b>..
+    - Hubungi <color=yellow><b>ambulans</b></color>!
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
+    duration: 2.4
   - Sentence:
-    - Keluarkan HP mu dan hubungi <b>112</b> !
-    CaptionColor: {r: 0.6039216, g: 1, b: 1, a: 0}
+    - Keluarkan HP mu dan <b>hubungi <color=yellow>112</color></b> !
+    CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
     duration: 1.6

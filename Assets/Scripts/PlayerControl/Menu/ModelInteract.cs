@@ -18,7 +18,8 @@ namespace PlayerControl
         public void Interact()
         {
             showText = false;
-            _textObject.enabled = showText;
+            if(_textObject != null)
+                _textObject.enabled = showText;
             _enterLevelScript.TargetGameSceneIndex = _changeTargetScene;
             _toEnable.SetActive(true);
             _animator.SetTrigger("Interact");
