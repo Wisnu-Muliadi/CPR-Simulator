@@ -66,9 +66,6 @@ namespace UserInterface
 
             switch (_pushDepthBar.value)
             {
-                case var _ when _pushDepthBar.value <= 3:
-                    _pushDepth = .2f;
-                    break;
                 case var _ when _pushDepthBar.value >= 6:
                     _logic.HurtPatient(.5f);
                     _pushDepth = 1f;

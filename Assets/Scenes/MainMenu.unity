@@ -1788,6 +1788,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1951639124}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &996501542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,10 +2903,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Infografik CPR
+  m_text: 'Infografik
+
+    CPR'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 18b87d6b99662e04f8fab1933f827932, type: 2}
+  m_sharedMaterial: {fileID: 2874839362129426613, guid: 18b87d6b99662e04f8fab1933f827932,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2925,7 +2940,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -2983,7 +2998,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  - {fileID: 2874839362129426613, guid: 18b87d6b99662e04f8fab1933f827932, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3013,7 +3028,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771565504}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 18.08}
+  m_LocalPosition: {x: 0, y: 0, z: 18}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3022,7 +3037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -20.22, y: 2.24}
+  m_AnchoredPosition: {x: -20.5, y: 2}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1817863713
@@ -3037,7 +3052,6 @@ GameObject:
   - component: {fileID: 1817863714}
   - component: {fileID: 1817863716}
   - component: {fileID: 1817863717}
-  - component: {fileID: 1817863718}
   m_Layer: 0
   m_Name: VirtualCam Main
   m_TagString: Untagged
@@ -3133,22 +3147,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1817863718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1817863713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 725d8458832fa34458d3bedc1bd63021, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  thisCam: {fileID: 1951639121}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!1 &1949008803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3364,7 +3362,7 @@ MonoBehaviour:
   thisCam: {fileID: 1951639121}
   _layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 512
 --- !u!82 &1951639125
 AudioSource:
   m_ObjectHideFlags: 0

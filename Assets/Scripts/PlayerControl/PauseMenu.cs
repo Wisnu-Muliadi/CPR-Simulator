@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] UnityEvent<bool> _pauseEvents;
+    [SerializeField] bool _stopTime = true;
+    [SerializeField] UnityEvent _pauseEvents;
+    [SerializeField] UnityEvent _unPauseEvents;
     UIManager _uimanager;
     bool _paused = false;
 
@@ -31,15 +33,15 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         _paused = false;
-        Time.timeScale = 1;
-        _pauseEvents.Invoke(false);
+        if(_stopTime)Time.timeScale = 1;
+        _unPauseEvents.Invoke();
         _uimanager.MouseDisplayAdd(false);
     }
     public void Pause()
     {
         _paused = true;
-        Time.timeScale = 0;
-        _pauseEvents.Invoke(true);
+        if(_stopTime)Time.timeScale = 0;
+        _pauseEvents.Invoke();
         _uimanager.MouseDisplayAdd(true);
     }
     public void BackToMenu()
