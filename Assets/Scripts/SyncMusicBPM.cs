@@ -5,14 +5,15 @@ using UserInterface;
 
 public class SyncMusicBPM : MonoBehaviour
 {
-    AudioSource _audioSource;
+    [SerializeField] AudioSource _audioSource;
     [SerializeField] AudioClip _music;
     [SerializeField] BpmUI _bpmUI;
     [SerializeField] Animation _animation;
 
     void Awake()
     {
-        _audioSource = gameObject.AddComponent<AudioSource>();
+        if(_audioSource == null)
+            _audioSource = gameObject.AddComponent<AudioSource>();
         _audioSource.bypassEffects = true;
         _audioSource.bypassReverbZones = true;
         enabled = false;

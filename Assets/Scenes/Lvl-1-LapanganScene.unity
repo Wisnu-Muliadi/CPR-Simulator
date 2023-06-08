@@ -166,6 +166,7 @@ Transform:
   - {fileID: 519908282}
   - {fileID: 183913452}
   - {fileID: 1988434211}
+  - {fileID: 226425834}
   - {fileID: 1497956482}
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -2664,7 +2665,7 @@ GameObject:
   - component: {fileID: 218576365}
   - component: {fileID: 218576367}
   - component: {fileID: 218576366}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TargetText (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2789,6 +2790,149 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 218576364}
   m_CullTransparentMesh: 1
+--- !u!1 &226425831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 226425834}
+  - component: {fileID: 226425833}
+  - component: {fileID: 226425832}
+  m_Layer: 0
+  m_Name: CPRMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &226425832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226425831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7be710c021b72f34391f5e6c2eadcf41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 226425833}
+  _lerpDuration: 0.8
+--- !u!82 &226425833
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226425831}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 0
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &226425834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226425831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 123416542}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &237388143
 GameObject:
   m_ObjectHideFlags: 3
@@ -3285,7 +3429,7 @@ GameObject:
   - component: {fileID: 360860874}
   - component: {fileID: 360860876}
   - component: {fileID: 360860875}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TargetText (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,7 +3722,7 @@ GameObject:
   - component: {fileID: 382748685}
   - component: {fileID: 382748687}
   - component: {fileID: 382748686}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TargetText (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4125,7 +4269,7 @@ GameObject:
   - component: {fileID: 480406488}
   - component: {fileID: 480406490}
   - component: {fileID: 480406489}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TargetText (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4262,7 +4406,7 @@ GameObject:
   - component: {fileID: 481210877}
   - component: {fileID: 481210876}
   - component: {fileID: 481210878}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Target 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4398,7 +4542,7 @@ GameObject:
   - component: {fileID: 488112954}
   - component: {fileID: 488112953}
   - component: {fileID: 488112956}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PassiveUICanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4503,7 +4647,7 @@ GameObject:
   - component: {fileID: 512203172}
   - component: {fileID: 512203171}
   - component: {fileID: 512203173}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Target 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7656,7 +7800,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abf636f8a63e4c143a378f5a4578a5b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _music: {fileID: 8300000, guid: fbb3217fb0b90194ba9f3226bcccadbe, type: 3}
+  _audioSource: {fileID: 226425833}
+  _music: {fileID: 8300000, guid: 7d114525fd46196449bc9278b5d29f77, type: 3}
   _bpmUI: {fileID: 863065625}
   _animation: {fileID: 2317378598471875379}
 --- !u!1001 &867250482
@@ -9704,7 +9849,7 @@ GameObject:
   - component: {fileID: 915774991}
   - component: {fileID: 915774990}
   - component: {fileID: 915774992}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Target 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13091,7 +13236,7 @@ GameObject:
   - component: {fileID: 1052150217}
   - component: {fileID: 1052150219}
   - component: {fileID: 1052150218}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TargetText (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13780,6 +13925,31 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1988434213}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 31756eeb4699b024e96d45b6047fe222,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1988434212}
+        m_TargetAssemblyTypeName: LerpVolume, Project
+        m_MethodName: LerpSound
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _currTime: 0
 --- !u!1 &1211753458
 GameObject:
@@ -14189,7 +14359,7 @@ GameObject:
   - component: {fileID: 1340968990}
   - component: {fileID: 1340968989}
   - component: {fileID: 1340968991}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Target 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14450,11 +14620,36 @@ PrefabInstance:
       propertyPath: m_text
       value: '- Menu -'
       objectReference: {fileID: 0}
+    - target: {fileID: 1946725244071504075, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946725244534429762, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1946725244679266472, guid: 691dec92b1555f94b8730f51ecb57b39,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1497956483}
+    - target: {fileID: 1946725244679266474, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946725244686225713, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946725244889476632, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1946725245285665869, guid: 691dec92b1555f94b8730f51ecb57b39,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -14464,6 +14659,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946725245285665871, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1946725245339691274, guid: 691dec92b1555f94b8730f51ecb57b39,
         type: 3}
@@ -14575,6 +14775,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause
       objectReference: {fileID: 0}
+    - target: {fileID: 1946725245339691275, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1946725245531544235, guid: 691dec92b1555f94b8730f51ecb57b39,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -14584,6 +14789,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946725245531544237, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946725245583429235, guid: 691dec92b1555f94b8730f51ecb57b39,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691dec92b1555f94b8730f51ecb57b39, type: 3}
@@ -15091,7 +15306,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 123416542}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1497956483
 MonoBehaviour:
@@ -15450,6 +15665,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 488112955}
     m_Modifications:
+    - target: {fileID: 8253562496621864553, guid: 2c23807fee58b7b4890031f1af05807d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253562496653485784, guid: 2c23807fee58b7b4890031f1af05807d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8253562496653485787, guid: 2c23807fee58b7b4890031f1af05807d,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -15509,11 +15734,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253562497195763861, guid: 2c23807fee58b7b4890031f1af05807d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8253562497482738835, guid: 2c23807fee58b7b4890031f1af05807d,
         type: 3}
       propertyPath: m_Name
       value: Caption Pool
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253562497482738835, guid: 2c23807fee58b7b4890031f1af05807d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8253562497482738837, guid: 2c23807fee58b7b4890031f1af05807d,
         type: 3}
@@ -15619,6 +15854,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8253562498345025801, guid: 2c23807fee58b7b4890031f1af05807d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8253562498345025804, guid: 2c23807fee58b7b4890031f1af05807d,
         type: 3}
@@ -15838,7 +16078,7 @@ GameObject:
   - component: {fileID: 1618193220}
   - component: {fileID: 1618193219}
   - component: {fileID: 1618193221}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Target 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16175,7 +16415,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1715458223}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Interact Targets
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20961,6 +21201,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
         m_MethodName: set_enabled
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 226425832}
+        m_TargetAssemblyTypeName: LerpVolume, Project
+        m_MethodName: LerpSound
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
