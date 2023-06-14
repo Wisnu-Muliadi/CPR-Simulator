@@ -16,16 +16,14 @@ MonoBehaviour:
   - Sentence:
     - Hentikan CPR.
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 2
+    duration: 8
   - Sentence:
-    - 30 Kompresi yang efektif sudah mengantar seluruh-
-    - oksigen dalam darah menuju otak
+    - Untuk pembelajaran, beri bantuan nafas pada <color=white><b>Pasien</b></color>
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 3
+    duration: 12
   - Sentence:
     - Beri <b><color=yellow>2 nafas buatan</color></b>!
     - Pastikan dada <color=white>pasien</color> terangkat saat memberi nafas.
-    - Pastikan juga dada <color=white>pasien</color> turun sebelum memberi nafas
-      berikutnya.
+    - dan Pastikan dada <color=white>pasien</color> turun sebelum memberi nafas berikutnya.
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 3
+    duration: 12

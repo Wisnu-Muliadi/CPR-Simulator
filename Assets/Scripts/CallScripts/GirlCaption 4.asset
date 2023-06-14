@@ -17,16 +17,15 @@ MonoBehaviour:
     - <color="yellow">Ambulans</color> membutuhkan waktu untuk sampai kemari!
     - Sambil menunggu, tugasmu adalah memberi <b><color=yellow>CPR</color></b>
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 2
+    duration: 20
   - Sentence:
-    - Letak kedua tanganmu di tengah dada pasien!
-    - Perkirakan di atas jantung pasien.
+    - Letak kedua tanganmu di pertengahan sternum pasien!
+    - Atau dua jari dari <b>Key Point</b> (diafragma)
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 2
+    duration: 16
   - Sentence:
-    - Beri dorongan kuat sejauh <b><color=yellow>5 cm</color></b>!
-    - Tekan secepat <b><color=yellow>120 kali per menit</color></b>
-    - Setelah <b>30 kali</b> tekanan. <b><color=yellow>Berhenti</color></b> dan <b><color=yellow>berikan
-      nafas buatan</color></b>
+    - Beri dorongan kuat sejauh <b><color=yellow>5-6 cm</color></b>!
+    - Tekan secepat <b><color=yellow>100-120 kali per menit</color></b>
+    - Beri <b>30 Kompresi Dada</b>
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 3
+    duration: 16

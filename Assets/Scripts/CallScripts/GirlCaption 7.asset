@@ -14,20 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Captions:
   - Sentence:
-    - Cukup..
-    - Berikan nafas buatan lagi..
+    - Dan proses ini diulangi <b>terus menerus</b>..
+    - Sampai <b><color=red>Tim Medis</color></b> tiba..
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 1
+    duration: 16
   - Sentence:
-    - Ini diulangi terus menerus hingga <b><color=red>Tim Medis</color></b> tiba.
+    - 'Perlu diperhatikan: CPR dapat dilakukan <b><color=yellow>tanpa</color></b>
+      pemberian nafas buatan.'
+    - Penduduk awam dianjurkan Cukup melakukan <b><color=yellow>"Hands-only CPR"</color></b>
+    - Setiap <b>100 kali kompresi</b> Periksa nafas <color=white>pasien</color>
+    - Jika <color=white>Pasien</color> bernafas, atur posisi <color=white>pasien</color>
+      menjadi <b><color=yellow>posisi mantab</color></b>
+    - Jika <color=white>Pasien</color> tidak bernafas, teruskan CPR.
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 3
+    duration: 20
   - Sentence:
-    - Sekian dengan pelatihan CPR kali ini.
     - Pengetahuan ini pasti bisa menyelamatkan nyawa seseorang
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 2
+    duration: 8
   - Sentence:
-    - Ingat prosedur tersebut sebelum mengaplikasi CPR pada seseorang.
+    - Ingat prosedur tersebut <b>sebelum mengaplikasi CPR pada seseorang</b>.
     CaptionColor: {r: 0.7764706, g: 1, b: 1, a: 1}
-    duration: 4
+    duration: 8

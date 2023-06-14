@@ -123,6 +123,10 @@ namespace CardiacPatient
             _gaspEvent.Invoke();
             StartCoroutine(nameof(ResetGasp));
         }
+        public void StopGasping()
+        {
+            CancelInvoke(nameof(AnimatorGasp));
+        }
         public void AnimatorGivenBreath()
         {
             _animatorController.SetTrigger("Gasp");

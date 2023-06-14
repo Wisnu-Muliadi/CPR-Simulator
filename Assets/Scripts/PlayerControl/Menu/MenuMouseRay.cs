@@ -14,9 +14,16 @@ namespace PlayerControl
     {
         [SerializeField] Camera thisCam;
         [SerializeField] LayerMask _layerMask;
+        float timer = 0;
+        float delayTime = 0;
         Ray _mouseRay;
         void Update()
         {
+            if (timer <= delayTime)
+            {
+                timer += Time.deltaTime;
+                return;
+            }
             _mouseRay = thisCam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(_mouseRay, out RaycastHit hitInfo, 100, _layerMask))
             {
@@ -28,6 +35,12 @@ namespace PlayerControl
                         menuInteractable.Interact();
                 }
             }
+        }
+        public void DelayEnable(float seconds)
+        {
+            timer = 0;
+            delayTime = seconds;
+            enabled = true;
         }
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   Captions:
   - Sentence:
     - Halo. Apa keadaan darurat Anda?
-    CaptionColor: {r: 1, g: 0.5981132, b: 0.64834905, a: 0}
+    CaptionColor: {r: 0.9528302, g: 0.6687789, b: 0.7021967, a: 0}
     duration: 2.5
   - Sentence:
     - TOLONG!
@@ -24,17 +24,17 @@ MonoBehaviour:
     duration: 2
   - Sentence:
     - Dia kesulitan bernafas..
-    - Nadinya lemah..
+    - dan Nadinya lemah..
     CaptionColor: {r: 1, g: 1, b: 1, a: 0}
-    duration: 1.5
+    duration: 2
   - Sentence:
     - Ambulans sudah dikirim.
     - Kira-kira 5 menit lagi akan sampai.
     - Kamu harus mambantu Pasien selagi menunggu.
-    CaptionColor: {r: 1, g: 0.6, b: 0.6509804, a: 0}
-    duration: 1.5
+    CaptionColor: {r: 0.9529412, g: 0.67058825, b: 0.7058824, a: 0}
+    duration: 1.2
   - Sentence:
     - Berikan <b>CPR</b> pada pasien.
     - Tetap lakukan <b>CPR</b> sampai Ambulansnya tiba.
-    CaptionColor: {r: 1, g: 0.6, b: 0.6509804, a: 0}
+    CaptionColor: {r: 0.9529412, g: 0.67058825, b: 0.7058824, a: 0}
     duration: 3

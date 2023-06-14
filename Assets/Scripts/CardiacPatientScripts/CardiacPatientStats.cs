@@ -11,12 +11,12 @@ namespace CardiacPatient
         public float patientHealth = 100;
         public float patientBrainOxygenLevel = 100; // berkurang berdasarkan suffocationSpeed
         private float _healthStart, _oxygenStart;
-        public float LowBrainOxygenThreshold { get; private set; } = 40; // oksigen otak kurang dari nilai ini maka akan mulai mengurangi patientHealth dengan kecepatan patientBrainOxygenLevel
 
-        public float SuffocationSpeed { get; private set; } = 0; // selalu meningkat. Hanya berkurang jika player kompresi dada * tingkat oxygen darah
+        public float SuffocationSpeed = 0; // selalu meningkat. Hanya berkurang jika player kompresi dada * tingkat oxygen darah
         [SerializeField] float _bloodOxygenLevel = 2; // berkurang seiring kompresi dada
 
         [Header("Parameters")]
+        public float LowBrainOxygenThreshold = 50; // oksigen otak kurang dari nilai ini maka akan mulai mengurangi patientHealth dengan kecepatan patientBrainOxygenLevel
         public float maxSuffocationSpeed = .75f;
         public float healthDecreaseMultiplier = .05f;
         const float _maxBloodOxygenLevel = 2;
@@ -38,8 +38,10 @@ namespace CardiacPatient
 
             if(patientBrainOxygenLevel < LowBrainOxygenThreshold && patientHealth > 0)
             {
-                if(SuffocationSpeed > 0)
-                    PatientHealthDecreasing();
+                if (SuffocationSpeed > 0)
+                    PatientHealthDecreasing(1);
+                else
+                    PatientHealthDecreasing(.5f);
                 if (patientHealth < 0) onZeroHealth?.Invoke();
             }
         }
@@ -59,7 +61,7 @@ namespace CardiacPatient
                 }
             }
         }
-        private void PatientHealthDecreasing() => patientHealth -= healthDecreaseMultiplier * (_healthStart - patientBrainOxygenLevel) * Time.deltaTime;
+        private void PatientHealthDecreasing(float multiplier) => patientHealth -= multiplier * healthDecreaseMultiplier * (_healthStart - patientBrainOxygenLevel) * Time.deltaTime;
         public float PatientHealthPercentage() => patientHealth / _healthStart;
         public float PatientOxygenPercentage() => patientBrainOxygenLevel / _oxygenStart;
 

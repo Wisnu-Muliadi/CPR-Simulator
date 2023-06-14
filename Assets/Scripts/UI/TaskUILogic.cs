@@ -16,12 +16,19 @@ namespace UserInterface
         private readonly List<GameObject> _taskListInstances = new();
         private readonly List<Animation> _tasksAnimations = new();// still hardcoded animation player. could be better
         public List<TaskScriptableObject> tasks = new();
+        public List<TaskScriptableObject> alternateTasks = new();
         
         [Space, Header("for Testing in Editor")]
         [SerializeField] private bool _refreshing = false;
 
         void Start()
         {
+            LevelSetup levelSetup = LevelSetup.Instance;
+            if (levelSetup != null)
+            {
+                if (levelSetup.TrainerMode) tasks = alternateTasks;
+            }
+
             for (int i = 0; i < ListSize; i++)
             {
                 _taskListInstances.Add(Instantiate(_taskInstance, _taskInstance.transform.parent.transform));

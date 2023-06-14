@@ -264,6 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextDuration: 3
+  _waitForInteract: 0
 --- !u!1 &8253562497195763861
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,6 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextDuration: 3
+  _waitForInteract: 0
 --- !u!1 &8253562497482738835
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,7 +569,6 @@ MonoBehaviour:
   - {fileID: 8253562497195763861}
   - {fileID: 8253562496653485784}
   - {fileID: 8253562498345025801}
-  _showDuration: 3
 --- !u!111 &8253562497482738792
 Animation:
   m_ObjectHideFlags: 0
@@ -752,3 +753,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextDuration: 3
+  _waitForInteract: 0

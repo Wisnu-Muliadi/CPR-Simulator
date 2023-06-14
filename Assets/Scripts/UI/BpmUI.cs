@@ -8,6 +8,7 @@ using TMPro;
 namespace UserInterface {
     public class BpmUI : MonoBehaviour
     {
+        [SerializeField] bool disableAfterStart = false;
         [SerializeField] private Slider _bpmHelperBar;
         [SerializeField] private Slider _pushDepthBar;
         [SerializeField] private TextMeshProUGUI _bpmUICounter;
@@ -30,20 +31,55 @@ namespace UserInterface {
         float _bpmCounter;
         float _lastHitTime;
 
-        const int _cprPushLimit = 30;
+        public int TargetBPM;
+        public float HitEfficiency;
+        [SerializeField] float _bpmMultiplier;
+        public int CprPushLimit;
         const float _delayInput = .2f;
         int _cprPushCount;
         float _pulseTimer;
-        public UnityEvent hitEvent;
+        public UnityEvent hitEvent = new();
+        [SerializeField] GameObject _cprSoundSourceObject;
+        AudioSource _cprSoundPlayer;
+        [SerializeField] AudioClip _cprSound;
         [SerializeField] UnityEvent<bool> _expireEvent;
         bool _missed; bool _invokedExpire = false;
-
+        
         void Start()
         {
+            try
+            {
+                if (LevelSetup.Instance.HandsOnly)
+                {
+                    CprPushLimit = 100;
+                    _cprSoundPlayer = _cprSoundSourceObject.AddComponent<AudioSource>();
+                    hitEvent.AddListener(() => _cprSoundPlayer.PlayOneShot(_cprSound));
+                }
+                else { CprPushLimit = 30; }
+                if (LevelSetup.Instance.MusicChange)
+                {
+                    TargetBPM = 103;
+                    _bpmMultiplier = 0.858333f; // 103 / 120
+                }
+                else
+                {
+                    TargetBPM = 120;
+                    _bpmMultiplier = 1f;
+                }
+                 
+            }
+            catch
+            {
+                Debug.LogWarning("no LevelSetup singleton, using old default BPMUI values");
+                CprPushLimit = 30;
+                TargetBPM = 120;
+                _bpmMultiplier = 1;
+            }
             _bpmCol = _bpmHitBar.GetComponent<Collider2D>();
             _bpmHitImg = _bpmHitBar.GetComponent<Image>();
             _counterTransform = _bpmUICounter.GetComponent<RectTransform>();
             _cprPushCount = 0;
+            enabled = !disableAfterStart;
         }
         void Update()
         {
@@ -51,7 +87,8 @@ namespace UserInterface {
         }
         void FixedUpdate()
         {
-            BpmTimer += Time.fixedDeltaTime;
+            BpmTimer += Time.fixedDeltaTime * _bpmMultiplier;
+            BpmTimer = Mathf.Repeat(BpmTimer, 1f);
             _lastHitTime += Time.fixedDeltaTime;
         }
         void UpdateTimerBar()
@@ -68,27 +105,28 @@ namespace UserInterface {
 
             _cprPushCount++;
             _cprPushCounter.text = _cprPushCount.ToString();
-            if(_cprPushCount < _cprPushLimit)
+            if(_cprPushCount < CprPushLimit)
             {
                 if (_bpmCol.GetContacts(_colliders) > 0)
                 {
                     if (!_missed)
                     {
-                        _bpmCounter = 120;
+                        _bpmCounter = TargetBPM;
+                        GetEfficiency(_bpmCounter, TargetBPM);
                         StartCoroutine(IPulseBPMCounter(.2f));
                     }
                     else
                     {
-                        _greenBlue = .0083f * Mathf.PingPong(_bpmCounter, 120);
+                        _greenBlue = GetEfficiency(_bpmCounter, TargetBPM);
                         _bpmUICounter.color = new Color(1f, _greenBlue, _greenBlue);
                     }
                     StartCoroutine(IPulseHitBar(.2f));
                 }
                 else
                 {
-                    _greenBlue = .0083f * Mathf.PingPong(_bpmCounter, 120);
+                    _greenBlue = GetEfficiency(_bpmCounter, TargetBPM);
                     _bpmUICounter.color = new Color(1f, _greenBlue, _greenBlue);
-                    if(_bpmCounter == 120) StartCoroutine(IPulseBPMCounter(.2f));
+                    if(_bpmCounter == TargetBPM) StartCoroutine(IPulseBPMCounter(.2f));
                 }
             }
             else
@@ -109,6 +147,16 @@ namespace UserInterface {
         {
             if (_bpmCounter > 130) return 0;
             return _bpmCounter;
+        }
+        public float GetEfficiency(float counter, float target)
+        {
+            HitEfficiency = Mathf.PingPong(counter, target) / target;
+            return HitEfficiency;
+        }
+        public float GetEfficiency()
+        {
+            //Debug.Log("GetEfficiency Called returning: " + HitEfficiency);
+            return HitEfficiency;
         }
         IEnumerator IPulseHitBar(float duration)
         {
@@ -145,5 +193,6 @@ namespace UserInterface {
             _cprPushCounter.color = Color.white;
             _cprPushCounter.text = "0";
         }
+        public Slider GetBpmSlider() => _bpmHelperBar;
     }
 }

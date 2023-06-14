@@ -74,10 +74,11 @@ namespace UserInterface
                     _pushDepth = .2f * _pushDepthBar.value;
                     break;
             }
-            // .0083 is approx 1/120. Used to avoid using division :P
-            _hitEfficiency = 0.0083f * Mathf.PingPong(_bpmUIScript.GetBPM(), 120f);
+            _hitEfficiency = _bpmUIScript.GetEfficiency();
             _sum =  Mathf.Clamp01(_pushDepth * _hitEfficiency);
             _logic.HandleResuscitation(_sum, _pushDepth);
+            //Debug.Log("hit efficiency: " + _hitEfficiency);
+            //Debug.Log("send summary: " + _sum);
         }
         public void SetPatient(Patient patient)
         {

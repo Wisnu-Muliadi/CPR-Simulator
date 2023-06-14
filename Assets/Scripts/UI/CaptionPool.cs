@@ -7,8 +7,8 @@ namespace UserInterface
 {
     public class CaptionPool : MonoBehaviour
     {
+        ClickableCaptionPool clickableCaptionPool;
         [SerializeField] private List<GameObject> _captionPool; // Use Queue instead. For future works.
-        [SerializeField] private float _showDuration = 3;
         Animation _capAnimation;
         [System.Serializable]
         struct Caption
@@ -18,7 +18,7 @@ namespace UserInterface
             public float duration;
         }
         readonly List<Caption> _caption = new();
-        public static int PoolOccupant = 0;
+        public static int PoolOccupant = 0; // incremented/decremented by CaptionText
         private int _poolMaxOccupant = 0;
         private readonly List<CaptionText> _captionText = new();
         private UnityEvent _endCaptionEvent = new();
@@ -28,6 +28,7 @@ namespace UserInterface
         void Awake()
         {
             _capAnimation = GetComponent<Animation>();
+            clickableCaptionPool = GetComponent<ClickableCaptionPool>();
         }
         void Start()
         {
@@ -57,7 +58,8 @@ namespace UserInterface
         }
         public void CallScriptParser(CallScript callScript, UnityEvent postEvent)
         {
-            _caption.RemoveAll(x=>true);
+            Clear();
+            if (clickableCaptionPool != null) clickableCaptionPool.Clear();
             for(int i = 0; i < callScript.Captions.Count; i++)
             {
                 Caption cap = new();
@@ -94,7 +96,7 @@ namespace UserInterface
                     for (int i = 0; i < _captionPool.Count; i++)
                     {
                         if (_captionPool[i].activeSelf) continue;
-
+                        _captionText[i].WaitForInteract = false;
                         _captionText[i].Text.text = _caption[0].caption;
                         _captionText[i].Text.color = _caption[0].captionColor;
                         _captionText[i].TextDuration = _caption[0].duration + .5f;
@@ -106,11 +108,21 @@ namespace UserInterface
                 }
                 _endCaptionEvent.Invoke();
                 initiation = true;
-                yield return new WaitUntil(()=> _captionPool.TrueForAll(x => !x.activeSelf));
+                yield return new WaitUntil(()=> _captionPool.TrueForAll(x => !x.activeSelf)); // Pause until there's inactive caption gObj
             } while (_caption.Count > 0);
             _endCaptionEvent = new();
             _capAnimation.PlayQueued("Caption Hidden");
             _routineStarted = false;
+        }
+        public void Clear()
+        {
+            _caption.RemoveAll(x => true);
+            PoolOccupant = 0;
+            Caption cap = new();
+            cap.caption = "";
+            cap.duration = 0;
+            cap.captionColor = Color.white;
+            _caption.Add(cap);
         }
     }
 }

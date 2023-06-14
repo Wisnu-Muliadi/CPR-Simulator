@@ -22,5 +22,9 @@ namespace CardiacPatient
         {
             _audioSource.PlayOneShot(_gaspSound);
         }
+        public void SetActiveSound(bool enabled)
+        {
+            _audioSource.enabled = enabled;
+        }
     }
 }

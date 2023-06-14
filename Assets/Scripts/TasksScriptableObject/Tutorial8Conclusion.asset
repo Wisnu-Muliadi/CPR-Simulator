@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Tutorial8Conclusion
   m_EditorClassIdentifier: 
   Tasks:
-  - <color=white>Simulasi ini</color> <color=red>tidak cukup sebagai dasar pengetahuan
-    <b>CPR</b></color>
-  - <color=white>Pelajaran CPR yang tepat dengan</color> <color=red><b>PMI</b></color>
-  - <color=white>Tekan <b>TAB</b> untuk kembali ke menu</color>
+  - <color=white>Ini hanya</color> <color=red>pengenalan dasar <b>Basic Life Support
+    CPR</b></color>
+  - <color=white>Pelatihan CPR yang baik dengan</color> <color=red><b>Instruktor
+    PMI</b></color>
+  - <color=white>Tekan <b>TAB</b> untuk kembali ke menu kapanpun</color>

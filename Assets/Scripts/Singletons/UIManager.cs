@@ -7,19 +7,22 @@ using UserInterface;
 public class UIManager : MonoBehaviour
 {
     public CaptionPool captionPool;
+    public ClickableCaptionPool clickableCaptionPool;
     public GameObject loadingCircle;
     public TextMeshProUGUI interactionText;
     public GameObject interactionUI;
     public GameObject[] helpUI;
     public GiveBreathUILogic giveBreathUI;
+    public BpmUI bpmUI;
+    [SerializeField] bool _startShowMouse = false;
 
     // for Mouse 
     private readonly List<bool> _showingMouse = new();
     void Start()
     {
-        if (_showingMouse.Count != 0)
+        if (_startShowMouse)
         {
-            _showingMouse.RemoveAt(_showingMouse.Count - 1);
+            MouseDisplayAdd(true);
         }
         MouseDisplayUpdate();
     }
