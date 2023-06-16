@@ -17169,7 +17169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 226425833}
-  _music: {fileID: 8300000, guid: 7d114525fd46196449bc9278b5d29f77, type: 3}
+  _music: {fileID: 8300000, guid: 740f0293d7ad89341aab0d87a5e15e02, type: 3}
   _bpmUI: {fileID: 863065625}
   _animation: {fileID: 2317378598471875379}
 --- !u!1001 &867250482
@@ -32795,7 +32795,7 @@ MonoBehaviour:
           m_MethodName: PlayOneShot
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 31756eeb4699b024e96d45b6047fe222,
+            m_ObjectArgument: {fileID: 8300000, guid: e63a25bffc53f4945b6e227594ef4c1c,
               type: 3}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
