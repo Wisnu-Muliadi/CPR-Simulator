@@ -92,10 +92,10 @@ namespace UserInterface {
             switch (inCprMode)
             {
                 case true:
-                    SwapSprite(_iCPRableUI);
+                    SwapSprite(_iCPRableUI, true);
                     break;
                 case false:
-                    SwapSprite(_iInteractableUI);
+                    SwapSprite(_iInteractableUI, false);
                     break;
             }
             TargetsCPRMode(inCprMode);
@@ -124,11 +124,14 @@ namespace UserInterface {
                 }
             }
         }
-        private void SwapSprite(Sprite sprite)
+        private void SwapSprite(Sprite sprite, bool raycastTarget)
         {
+            Image img;
             foreach (RectTransform rect in _uiTargetsPool)
             {
-                rect.GetComponent<Image>().sprite = sprite;
+                img = rect.GetComponent<Image>();
+                img.sprite = sprite;
+                img.raycastTarget = raycastTarget;
             }
         }
     }

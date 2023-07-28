@@ -48,12 +48,16 @@ namespace UserInterface
 
             if (Input.GetKeyDown(_interactKey) || timer >= _caption[0].maxDuration)
             {
-                _caption.RemoveAt(0);
-                _captionQueue.Enqueue(currentCaption);
-                currentCaption.InteractWithText();
-
-                DequeueOldestCaption();
+                NextCaption();
             }
+        }
+        public void NextCaption()
+        {
+            _caption.RemoveAt(0);
+            _captionQueue.Enqueue(currentCaption);
+            currentCaption.InteractWithText();
+
+            DequeueOldestCaption();
         }
         void FixedUpdate()
         {

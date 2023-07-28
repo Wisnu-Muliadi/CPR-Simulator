@@ -6,6 +6,9 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using TMPro;
 using CardiacPatient;
+#if !UNITY_EDITOR && UNITY_WEBGL
+using System.Runtime.InteropServices;
+#endif
 
 namespace UserInterface
 {
@@ -15,6 +18,7 @@ namespace UserInterface
         [HideInInspector]
         public Patient patient;
         CardiacPatientLogic _logic;
+        [SerializeField] bool _isMobile = false;
 
         [SerializeField] Slider _breathBar;
         [SerializeField] TextMeshProUGUI _percentText;
@@ -51,9 +55,25 @@ namespace UserInterface
                 _fillArea.color = new Color(1f - _greenBlue, _greenBlue, 0f);
             }
         }
-        
+#if !UNITY_EDITOR && UNITY_WEBGL
+        [DllImport("__Internal")]
+        private static extern bool IsMobile();
+#endif
         public void OnPointerDown(PointerEventData eventData)
         {
+#if !UNITY_EDITOR && UNITY_WEBGL
+            _isMobile = IsMobile();
+#endif
+            if(_isMobile)
+            {
+                if(Input.touchCount > 0)
+                {
+                    if(Input.GetTouch(0).phase != TouchPhase.Began)
+                    {
+                        return;
+                    }
+                }
+            }
             _pointerDown.Invoke();
             _popUpAnimator.Play("Hide");
             _timer = 0;

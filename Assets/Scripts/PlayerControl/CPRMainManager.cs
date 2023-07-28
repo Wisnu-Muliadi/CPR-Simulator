@@ -19,6 +19,7 @@ namespace PlayerControl
         [HideInInspector] public CPR_CamController cprCamCtrl;
         [HideInInspector] public PlayerCPRTargeting cprTargeting;
         public bool disableExit = false;
+        public void InvokeExit() => Exit();
 
         [SerializeField] SkinnedMeshRenderer _playerHands;
         public UnityEvent<string> eventUI_Update;
@@ -154,20 +155,24 @@ namespace PlayerControl
             if (disableExit) return;
             if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Escape) || Input.GetButtonDown("Phone"))
             {
-                if (camState != CamState.Overview && camState != CamState.Head)
-                {
-                    ReturnToOverview();
-                }
-                else if (camState == CamState.Head)
-                {
-                    return;
-                }
-                else
-                {
-                    cprTargeting.SetPatient(null);
-                }
-                eventUI_Enable.Invoke(false);
+                Exit();
             }
+        }
+        private void Exit()
+        {
+            if (camState != CamState.Overview && camState != CamState.Head)
+            {
+                ReturnToOverview();
+            }
+            else if (camState == CamState.Head)
+            {
+                return;
+            }
+            else
+            {
+                cprTargeting.SetPatient(null);
+            }
+            eventUI_Enable.Invoke(false);
         }
         public void Expired(bool expired)
         {

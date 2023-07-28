@@ -15,6 +15,7 @@ namespace PlayerControl
         [SerializeField, Tooltip("false when Using Phone")] private UnityEvent<bool> _notUsingPhone = new();
         private string _numberField = "";
         private bool _phoneActive = false;
+        [SerializeField] UnityEvent onUpdate, onDisabled;
         void Awake()
         {
             if (_phoneAnimator == null) _phoneAnimator = GetComponent<Animator>();
@@ -26,7 +27,15 @@ namespace PlayerControl
                 UsePhone();
             }
         }
-        private void UsePhone()
+        private void FixedUpdate()
+        {
+            onUpdate.Invoke();
+        }
+        private void OnDisable()
+        {
+            onDisabled.Invoke();
+        }
+        public void UsePhone()
         {
             if (!_phoneActive)
             {

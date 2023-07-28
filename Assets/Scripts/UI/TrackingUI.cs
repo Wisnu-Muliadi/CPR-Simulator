@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 using PlayerControl;
 
-public class TrackingUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+public class TrackingUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     RectTransform _rect;
     GameObject _textObject;
@@ -66,7 +66,7 @@ public class TrackingUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         _textObject.SetActive(true);
         _grow = true;
     }
-    public void OnPointerDown(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData eventData)
     {
         InteractCPR();
     }

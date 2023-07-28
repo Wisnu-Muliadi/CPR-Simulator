@@ -22,6 +22,8 @@ namespace PlayerControl
         [SerializeField] Camera _cam;
         [SerializeField] float _rayDistance = 3;
         [SerializeField] LayerMask _layerMask;
+        bool _interactButton = false;
+        public void InteractButton() => _interactButton = true;
 
         Ray ray;
         RaycastHit hitinfo;
@@ -57,10 +59,11 @@ namespace PlayerControl
                     //Debug.DrawLine(ray.origin, ray.GetPoint(_rayDistance), Color.green);
                     eventUI_Enable.Invoke(true);
                     eventUI_Update.Invoke(interactable.GetDescription());
-                    if (Input.GetButtonDown("Interact"))
+                    if (Input.GetButtonDown("Interact") || _interactButton)
                     {
                         interactable.Interact(this);
                         eventUI_Enable.Invoke(false);
+                        _interactButton = false;
                     }
                 }
             }
